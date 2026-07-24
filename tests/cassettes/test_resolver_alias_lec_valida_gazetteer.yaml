@@ -1,0 +1,63 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - www.boe.es
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2000-323/metadatos
+  response:
+    body:
+      string: "{\n    \"status\": {\n        \"code\": \"200\",\n        \"text\":
+        \"ok\"\n    },\n    \"data\": [\n        {\n            \"fecha_actualizacion\":
+        \"20260327T103425Z\",\n            \"identificador\": \"BOE-A-2000-323\",\n
+        \           \"ambito\": {\n                \"codigo\": \"1\",\n                \"texto\":
+        \"Estatal\"\n            },\n            \"departamento\": {\n                \"codigo\":
+        \"7723\",\n                \"texto\": \"Jefatura del Estado\"\n            },\n
+        \           \"rango\": {\n                \"codigo\": \"1300\",\n                \"texto\":
+        \"Ley\"\n            },\n            \"fecha_disposicion\": \"20000107\",\n
+        \           \"numero_oficial\": \"1\\/2000\",\n            \"titulo\": \"Ley
+        1\\/2000, de 7 de enero, de Enjuiciamiento Civil.\",\n            \"diario\":
+        \"Bolet\\u00edn Oficial del Estado\",\n            \"fecha_publicacion\":
+        \"20000108\",\n            \"diario_numero\": \"7\",\n            \"fecha_vigencia\":
+        \"20010108\",\n            \"estatus_derogacion\": \"N\",\n            \"estatus_anulacion\":
+        \"N\",\n            \"vigencia_agotada\": \"N\",\n            \"estado_consolidacion\":
+        {\n                \"codigo\": \"3\",\n                \"texto\": \"Finalizado\"\n
+        \           },\n            \"url_eli\": \"https:\\/\\/www.boe.es\\/eli\\/es\\/l\\/2000\\/01\\/07\\/1\",\n
+        \           \"url_html_consolidada\": \"https:\\/\\/www.boe.es\\/buscar\\/act.php?id=BOE-A-2000-323\"\n
+        \       }\n    ]\n}"
+    headers:
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length,Content-Range
+      age:
+      - '0'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jul 2026 19:37:05 GMT
+      strict-transport-security:
+      - max-age=31536000
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept
+    status:
+      code: 200
+      message: OK
+version: 1

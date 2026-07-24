@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/sparql-results+json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - publications.europa.eu
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://publications.europa.eu/webapi/rdf/sparql?query=PREFIX+cdm%3A+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fontology%2Fcdm%23%3E%0A%0ASELECT+%3Finforce+%3Feif+%3Fendval+WHERE+%7B%0A++%3Fwork+cdm%3Aresource_legal_id_celex+%3Fcelex+.%0A++FILTER%28STR%28%3Fcelex%29+%3D+%2232016R0679%22%29%0A++OPTIONAL+%7B+%3Fwork+cdm%3Aresource_legal_in-force+%3Finforce+%7D%0A++OPTIONAL+%7B+%3Fwork+cdm%3Aresource_legal_date_entry-into-force+%3Feif+%7D%0A++OPTIONAL+%7B+%3Fwork+cdm%3Aresource_legal_date_end-of-validity+%3Fendval+%7D%0A%7D%0A&format=application%2Fsparql-results%2Bjson
+  response:
+    body:
+      string: "\n{ \"head\": { \"link\": [], \"vars\": [\"inforce\", \"eif\", \"endval\"]
+        },\n  \"results\": { \"distinct\": false, \"ordered\": true, \"bindings\":
+        [\n    { \"inforce\": { \"type\": \"literal\", \"datatype\": \"http://www.w3.org/2001/XMLSchema#boolean\",
+        \"value\": \"1\" }\t, \"eif\": { \"type\": \"literal\", \"datatype\": \"http://www.w3.org/2001/XMLSchema#date\",
+        \"value\": \"2016-05-24\" }\t, \"endval\": { \"type\": \"literal\", \"datatype\":
+        \"http://www.w3.org/2001/XMLSchema#date\", \"value\": \"9999-12-31\" }},\n
+        \   { \"inforce\": { \"type\": \"literal\", \"datatype\": \"http://www.w3.org/2001/XMLSchema#boolean\",
+        \"value\": \"1\" }\t, \"eif\": { \"type\": \"literal\", \"datatype\": \"http://www.w3.org/2001/XMLSchema#date\",
+        \"value\": \"2018-05-25\" }\t, \"endval\": { \"type\": \"literal\", \"datatype\":
+        \"http://www.w3.org/2001/XMLSchema#date\", \"value\": \"9999-12-31\" }} ]
+        } }"
+    headers:
+      accept-ranges:
+      - bytes
+      connection:
+      - keep-alive
+      content-disposition:
+      - filename=sparql_2026-07-24_19-36-58Z.json
+      content-length:
+      - '790'
+      content-type:
+      - application/sparql-results+json
+      date:
+      - Fri, 24 Jul 2026 19:36:58 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/sparql-results+json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - publications.europa.eu
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://publications.europa.eu/webapi/rdf/sparql?query=PREFIX+cdm%3A+%3Chttp%3A%2F%2Fpublications.europa.eu%2Fontology%2Fcdm%23%3E%0A%0ASELECT+DISTINCT+%3Fderogante+WHERE+%7B%0A++%3Fwork+cdm%3Aresource_legal_id_celex+%3Fc+.%0A++FILTER%28STR%28%3Fc%29+%3D+%2232016R0679%22%29%0A++%3Fotro+cdm%3Aresource_legal_repeals_resource_legal+%3Fwork+.%0A++%3Fotro+cdm%3Aresource_legal_id_celex+%3Fderogante+.%0A%7D%0A&format=application%2Fsparql-results%2Bjson
+  response:
+    body:
+      string: "\n{ \"head\": { \"link\": [], \"vars\": [\"derogante\"] },\n  \"results\":
+        { \"distinct\": false, \"ordered\": true, \"bindings\": [ ] } }"
+    headers:
+      accept-ranges:
+      - bytes
+      connection:
+      - keep-alive
+      content-disposition:
+      - filename=sparql_2026-07-24_19-36-58Z.json
+      content-length:
+      - '120'
+      content-type:
+      - application/sparql-results+json
+      date:
+      - Fri, 24 Jul 2026 19:36:58 GMT
+    status:
+      code: 200
+      message: OK
+version: 1

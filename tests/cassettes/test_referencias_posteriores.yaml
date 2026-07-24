@@ -1,0 +1,337 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - www.boe.es
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1992-26318/analisis
+  response:
+    body:
+      string: "{\n    \"status\": {\n        \"code\": \"200\",\n        \"text\":
+        \"ok\"\n    },\n    \"data\": [\n        {\n            \"materias\": [\n
+        \               {\n                    \"materia\": {\n                        \"codigo\":
+        \"6219\",\n                        \"texto\": \"Responsabilidad Civil de la
+        Administraci\\u00f3n\"\n                    }\n                }\n            ],\n
+        \           \"notas\": {\n                \"nota\": \"La fecha de derogaci\\u00f3n
+        se establece de acuerdo con la disposici\\u00f3n derogatoria \\u00fanica.2.a),
+        en relaci\\u00f3n con la disposici\\u00f3n final 7 de  la Ley 39\\/2015, de
+        1 de octubre. BOE-A-2015-10565\"\n            },\n            \"referencias\":
+        {\n                \"anteriores\": [\n                    {\n                        \"anterior\":
+        [\n                            {\n                                \"id_norma\":
+        \"BOE-A-1958-11341\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"210\",\n                                    \"texto\": \"DEROGA\"\n                                },\n
+        \                               \"texto\": \"parcialmente la Ley sobre procedimiento
+        administrativo, de 17 de julio de 1958\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1957-10111\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"210\",\n                                    \"texto\": \"DEROGA\"\n                                },\n
+        \                               \"texto\": \"los arts. 22.3 y 5, 29, 33, 34
+        y 36 a 43 de la Ley de R\\u00e9gimen jur\\u00eddico de la Administraci\\u00f3n
+        del Estado, texto refundido aprobado por Decreto de 26 de julio de 1957 (Gazeta)\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-1956-17970\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"210\",\n                                    \"texto\": \"DEROGA\"\n                                },\n
+        \                               \"texto\": \"los arts. 52 a 55 y modifica
+        los arts. 37.1 y 57.2 de la Ley reguladora de la Jurisdicci\\u00f3n contencioso-administrativa,
+        de 27 de diciembre de 1956 (Gazeta)\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1990-9943\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"330\",\n                                    \"texto\":
+        \"CITA\"\n                                },\n                                \"texto\":
+        \"Ley de procedimiento laboral, texto articulado aprobado por Real Decreto
+        Legislativo 521\\/1990, de 27 de abril\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1985-12666\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"330\",\n                                    \"texto\": \"CITA\"\n                                },\n
+        \                               \"texto\": \"Ley Org\\u00e1nica 6\\/1985,
+        de 1 de julio\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1963-22706\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"330\",\n                                    \"texto\":
+        \"CITA\"\n                                },\n                                \"texto\":
+        \"Ley 230\\/1963, de 28 de diciembre\"\n                            }\n                        ]\n
+        \                   }\n                ],\n                \"posteriores\":
+        [\n                    {\n                        \"posterior\": [\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2015-10565\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"210\",\n                                    \"texto\":
+        \"SE DEROGA\"\n                                },\n                                \"texto\":
+        \"en la forma indicada, por Ley 39\\/2015, de 1 de octubre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2007-12352\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"210\",\n                                    \"texto\": \"SE DEROGA\"\n                                },\n
+        \                               \"texto\": \"los arts. 38.9, 45.2, 3 y 4,
+        59.3 y la disposici\\u00f3n adicional 18, por Ley 11\\/2007, de 22 de junio\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-1998-16718\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"210\",\n                                    \"texto\": \"SE DEROGA\"\n                                },\n
+        \                               \"texto\": \"el apartado 3 del art. 110, por
+        Ley 29\\/1998 de 13 de julio\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1997-7878\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"210\",\n                                    \"texto\":
+        \"SE DEROGA\"\n                                },\n                                \"texto\":
+        \"la disposici\\u00f3n adicional 9, por Ley 6\\/1997, de 14 de abril\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2015-6517\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"la disposici\\u00f3n adicional 20.5, por Ley Org\\u00e1nica 6\\/2015, de
+        12 de junio\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2014-9467\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"270\",\n                                    \"texto\":
+        \"SE MODIFICA\"\n                                },\n                                \"texto\":
+        \"el art. 59.5 y SE A\\u00d1ADE las disposiciones adicional 21 y transitoria
+        3, por Ley 15\\/2014, de 16 de septiembre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2013-12887\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"los arts. 35.h) y 37, por Ley 19\\/2013, de 9 de diciembre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2011-11641\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"el art. 38.4.b) y disposici\\u00f3n adicional 2, por Real Decreto-ley 8\\/2011,
+        de 1 de julio\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2011-4117\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"270\",\n                                    \"texto\":
+        \"SE MODIFICA\"\n                                },\n                                \"texto\":
+        \"el art. 142.3, por Ley 2\\/2011, de 4 de marzo\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2009-20725\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"el art. 43 y SE A\\u00d1ADE el 39 y 71 bis, por Ley 25\\/2009, de 22 de
+        diciembre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2009-17493\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"270\",\n                                    \"texto\":
+        \"SE MODIFICA\"\n                                },\n                                \"texto\":
+        \"el art. 139, con efectos de 4 de mayo de 2010, por Ley 13\\/2009, de 3 de
+        noviembre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2003-23936\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"270\",\n                                    \"texto\":
+        \"SE MODIFICA\"\n                                },\n                                \"texto\":
+        \"el art. 103.3, por Ley 62\\/2003, de 30 de diciembre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2003-23103\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"los arts. 127.1 y 129.1, por la Ley 57\\/2003, de 16 de diciembre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2001-24965\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"los arts. 38 y 59 y SE A\\u00d1ADE la disposici\\u00f3n adicional 18, por
+        la Ley 24\\/2001, de 27 de diciembre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1999-847\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"270\",\n                                    \"texto\":
+        \"SE MODIFICA\"\n                                },\n                                \"texto\":
+        \", por la Ley 4\\/1999, de 13 de enero\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1993-21772\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"las disposiciones adicional 3 y transitoria 2.3, el Real Decreto-ley 14\\/1993,
+        de 4 de agosto\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2013-13756\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"407\",\n                                    \"texto\":
+        \"SE A\\u00d1ADE\"\n                                },\n                                \"texto\":
+        \"la disposici\\u00f3n adicional 20, por Ley 27\\/2013, de 27 de diciembre\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2009-18732\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"407\",\n                                    \"texto\": \"SE A\\u00d1ADE\"\n
+        \                               },\n                                \"texto\":
+        \"la disposici\\u00f3n adicional 8 bis, por Ley 18\\/2009, de 23 de noviembre\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2003-21187\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"407\",\n                                    \"texto\": \"SE A\\u00d1ADE\"\n
+        \                               },\n                                \"texto\":
+        \"una disposici\\u00f3n adicional 19, por la Ley Org\\u00e1nica 14\\/2003,
+        de 20 de noviembre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1993-1922\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"201\",\n                                    \"texto\":
+        \"CORRECCI\\u00d3N de errores\"\n                                },\n                                \"texto\":
+        \"en BOE n\\u00fam. 23, de 27 de enero de 1993\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1992-28641\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"201\",\n                                    \"texto\": \"CORRECCI\\u00d3N
+        de errores\"\n                                },\n                                \"texto\":
+        \"en BOE n\\u00fam. 311, de 28 de diciembre de 1992\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1999-11499\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"490\",\n                                    \"texto\": \"SE DESARROLLA\"\n
+        \                               },\n                                \"texto\":
+        \"los arts. 35.c), 38, 46 y 70.3, por el Real Decreto 772\\/1999 de 7 de mayo\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2011-18580\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \": Resoluci\\u00f3n de 15 de noviembre de 2011\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2010-12237\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \": Acuerdo de 27 de julio de 2010\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2010-3034\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"440\",\n                                    \"texto\":
+        \"SE DICTA DE CONFORMIDAD\"\n                                },\n                                \"texto\":
+        \"con el art. 42.4, estableciendo los criterios para la emisi\\u00f3n de la
+        Comunicaci\\u00f3n a los interesados: Real Decreto 137\\/2010, de 12 de febrero\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2006-8149\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \"con el art. 35.f), suprimiendo la exigencia de presentaci\\u00f3n del certificado
+        de empadronamiento en los procedimientos administrativos: Real Decreto 523\\/2006,
+        de 28 de abril\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2006-8148\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"440\",\n                                    \"texto\":
+        \"SE DICTA DE CONFORMIDAD\"\n                                },\n                                \"texto\":
+        \"con el art. 35.f), suprimiendo aportar fotocopias del DNI en los procedimientos
+        administrativos: Real Decreto 522\\/2006, de 28 de abril\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2005-4159\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \": Orden DEF\\/581\\/2005, de 10 de marzo de 2005\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2003-4151\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \"con los arts. 38.9, 45 y 59.3 y disposici\\u00f3n adicional 18, regulando
+        los registros y las notificaciones telem\\u00e1ticas: Real Decreto 209\\/2003,
+        de 21 de febrero\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1999-9006\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"440\",\n                                    \"texto\":
+        \"SE DICTA DE CONFORMIDAD\"\n                                },\n                                \"texto\":
+        \"con el art. 42.4, estableciendo los criterios para la emisi\\u00f3n de la
+        Comunicaci\\u00f3n a los interesados: la Orden de 14 de abril de 1999\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-1997-26482\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \"con el art. 43.5, publicando relaci\\u00f3n de Procedimientos de la Administraci\\u00f3n:
+        Resoluci\\u00f3n de 27 de noviembre de 1997\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1996-4997\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \", regulando los servicios de informaci\\u00f3n administrativa y atenci\\u00f3n
+        al ciudadano: Real Decreto 208\\/1996, de 9 de febrero\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1996-4594\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \"con el art. 45, regulando el uso de t\\u00e9cnicas electr\\u00f3nicas, inform\\u00e1ticas
+        y telem\\u00e1ticas por la Administraci\\u00f3n General del Estado, por el
+        Real Decreto 263\\/1996, de 16 de febrero\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1993-31099\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \"con la disposici\\u00f3n adicional 3, aprobando el Reglamento del procedimiento
+        para la concesi\\u00f3n de subvenciones p\\u00fablicas: el Real Decreto 2225\\/1993,
+        de 17 de diciembre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1993-20748\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"440\",\n                                    \"texto\":
+        \"SE DICTA DE CONFORMIDAD\"\n                                },\n                                \"texto\":
+        \", aprobando el Reglamento del procedimiento para el ejercicio de la potestad
+        sancionadora: el Real Decreto 1398\\/1993, de 4 de agosto\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1993-11253\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \"con los arts. 142.3 y 145.2, aprobando el Reglamento de los procedimientos
+        de las Administraciones P\\u00fablicas en materia de responsabilidad patrimonial:
+        Real Decreto 429\\/1993, de 26 de marzo\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2012-7508\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \"la desestimaci\\u00f3n de la Cuesti\\u00f3n 127\\/2012 (Ref.2012\\/3396),
+        en relaci\\u00f3n con el art. 132.2 y 3, por Sentencia 98\\/2012, de 7 de
+        mayo\"\n                            },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2012-7504\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \"la desestimaci\\u00f3n de la Cuesti\\u00f3n 3215\\/2010 (Ref. 2010\\/8908),
+        en relaci\\u00f3n con el art. 132, por Sentencia 94\\/2012, de 7 de mayo\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2012-7503\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \"la desestimaci\\u00f3n de la Cuesti\\u00f3n 1473\\/2010 (Ref. 2010\\/6749),
+        en relaci\\u00f3n con el art. 132.2 y 3, por Sentencia 93\\/2012, de 7 de
+        mayo\"\n                            },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2012-7501\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \"la desestimaci\\u00f3n de la Cuesti\\u00f3n 9690\\/2009 (Ref. 2010\\/3603)
+        en relaci\\u00f3n con el art. 132, por Sentencia 91\\/2012, de 7 de mayo\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2012-6485\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \"la desestimaci\\u00f3n de la Cuesti\\u00f3n 2948\\/2010 (Ref. 2010\\/8907),
+        en relaci\\u00f3n con el art. 132, por Sentencia 75\\/2012, de 16 de abril\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2012-5000\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \"la desestimaci\\u00f3n de la Cuesti\\u00f3n 9689\\/2009 (Ref. 2010\\/3602),
+        en relaci\\u00f3n al art. 132, por Sentencia 37\\/2012, de 19 de marzo\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-T-1999-9294\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \"en los recursos acumulados 521 y 547\\/1993,  contrario al Orden constitucional
+        de competencias lo indicado del art.17.1 y los arts. 23.1 y 2, 24.1, 2 y 3,
+        25.2 y 3 y 27.2, 3 y 5, y constitucionales interpretados en la forma indicada,
+        el art. 36.2.2 y 36.3, por Sentencia 50\\/1999, de 6 de abril\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-T-1996-14267\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \"en la Cuesti\\u00f3n 1125\\/1996 (Ref. 1996\\/7516) que no es inconstitucional,
+        interpretado en el sentido indicado, el art. 110.3, por Sentencia 89\\/1996,
+        de 23 de mayo\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-T-1996-12337\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"470\",\n                                    \"texto\":
+        \"SE DECLARA\"\n                                },\n                                \"texto\":
+        \"en las Cuestiones 1410, 1884, 1919, 3374 y 3806\\/1995 que no es inconstitucional
+        el art. 110.3, interpretado seg\\u00fan el f.j. 7, p\\u00e1rrafo 2, por Sentencia
+        76\\/1996, de 30 de abril\"\n                            }\n                        ]\n
+        \                   }\n                ]\n            }\n        }\n    ]\n}"
+    headers:
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length,Content-Range
+      age:
+      - '0'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jul 2026 19:36:56 GMT
+      strict-transport-security:
+      - max-age=31536000
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept
+    status:
+      code: 200
+      message: OK
+version: 1

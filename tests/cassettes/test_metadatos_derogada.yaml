@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - www.boe.es
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1992-26318/metadatos
+  response:
+    body:
+      string: "{\n    \"status\": {\n        \"code\": \"200\",\n        \"text\":
+        \"ok\"\n    },\n    \"data\": [\n        {\n            \"fecha_actualizacion\":
+        \"20260626T073729Z\",\n            \"identificador\": \"BOE-A-1992-26318\",\n
+        \           \"ambito\": {\n                \"codigo\": \"1\",\n                \"texto\":
+        \"Estatal\"\n            },\n            \"departamento\": {\n                \"codigo\":
+        \"7723\",\n                \"texto\": \"Jefatura del Estado\"\n            },\n
+        \           \"rango\": {\n                \"codigo\": \"1300\",\n                \"texto\":
+        \"Ley\"\n            },\n            \"fecha_disposicion\": \"19921126\",\n
+        \           \"numero_oficial\": \"30\\/1992\",\n            \"titulo\": \"Ley
+        30\\/1992, de 26 de noviembre, de R\\u00e9gimen Jur\\u00eddico de las Administraciones
+        P\\u00fablicas y del Procedimiento Administrativo Com\\u00fan.\",\n            \"diario\":
+        \"Bolet\\u00edn Oficial del Estado\",\n            \"fecha_publicacion\":
+        \"19921127\",\n            \"diario_numero\": \"285\",\n            \"fecha_vigencia\":
+        \"19930227\",\n            \"estatus_derogacion\": \"S\",\n            \"fecha_derogacion\":
+        \"20210402\",\n            \"estatus_anulacion\": \"N\",\n            \"vigencia_agotada\":
+        \"S\",\n            \"estado_consolidacion\": {\n                \"codigo\":
+        \"3\",\n                \"texto\": \"Finalizado\"\n            },\n            \"url_eli\":
+        \"https:\\/\\/www.boe.es\\/eli\\/es\\/l\\/1992\\/11\\/26\\/30\",\n            \"url_html_consolidada\":
+        \"https:\\/\\/www.boe.es\\/buscar\\/act.php?id=BOE-A-1992-26318\"\n        }\n
+        \   ]\n}"
+    headers:
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length,Content-Range
+      age:
+      - '0'
+      content-length:
+      - '1442'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jul 2026 19:36:56 GMT
+      strict-transport-security:
+      - max-age=31536000
+      vary:
+      - Accept
+    status:
+      code: 200
+      message: OK
+version: 1

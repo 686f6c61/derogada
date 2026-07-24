@@ -1,0 +1,153 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - www.boe.es
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A+%7B%22query_string%22%3A+%7B%22query%22%3A+%22titulo%3A%28Ley+30%2F1992%29%22%7D%7D%7D&limit=6&offset=0
+  response:
+    body:
+      string: "{\n    \"status\": {\n        \"code\": \"200\",\n        \"text\":
+        \"ok\"\n    },\n    \"data\": [\n        {\n            \"fecha_actualizacion\":
+        \"20260626T073729Z\",\n            \"identificador\": \"BOE-A-1992-26318\",\n
+        \           \"ambito\": {\n                \"codigo\": \"1\",\n                \"texto\":
+        \"Estatal\"\n            },\n            \"departamento\": {\n                \"codigo\":
+        \"7723\",\n                \"texto\": \"Jefatura del Estado\"\n            },\n
+        \           \"rango\": {\n                \"codigo\": \"1300\",\n                \"texto\":
+        \"Ley\"\n            },\n            \"fecha_disposicion\": \"19921126\",\n
+        \           \"numero_oficial\": \"30\\/1992\",\n            \"titulo\": \"Ley
+        30\\/1992, de 26 de noviembre, de R\\u00e9gimen Jur\\u00eddico de las Administraciones
+        P\\u00fablicas y del Procedimiento Administrativo Com\\u00fan.\",\n            \"diario\":
+        \"Bolet\\u00edn Oficial del Estado\",\n            \"fecha_publicacion\":
+        \"19921127\",\n            \"diario_numero\": \"285\",\n            \"fecha_vigencia\":
+        \"19930227\",\n            \"vigencia_agotada\": \"S\",\n            \"estado_consolidacion\":
+        {\n                \"codigo\": \"3\",\n                \"texto\": \"Finalizado\"\n
+        \           },\n            \"url_eli\": \"https:\\/\\/www.boe.es\\/eli\\/es\\/l\\/1992\\/11\\/26\\/30\",\n
+        \           \"url_html_consolidada\": \"https:\\/\\/www.boe.es\\/buscar\\/act.php?id=BOE-A-1992-26318\"\n
+        \       },\n        {\n            \"fecha_actualizacion\": \"20251219T123636Z\",\n
+        \           \"identificador\": \"BOE-A-2010-3034\",\n            \"ambito\":
+        {\n                \"codigo\": \"1\",\n                \"texto\": \"Estatal\"\n
+        \           },\n            \"departamento\": {\n                \"codigo\":
+        \"7710\",\n                \"texto\": \"Ministerio de la Presidencia\"\n            },\n
+        \           \"rango\": {\n                \"codigo\": \"1340\",\n                \"texto\":
+        \"Real Decreto\"\n            },\n            \"fecha_disposicion\": \"20100212\",\n
+        \           \"numero_oficial\": \"137\\/2010\",\n            \"titulo\": \"Real
+        Decreto 137\\/2010, de 12 de febrero, por el que se establecen criterios para
+        la emisi\\u00f3n de la comunicaci\\u00f3n a los interesados prevista en el
+        art\\u00edculo 42.4 de la Ley 30\\/1992, de 26 de noviembre, de R\\u00e9gimen
+        Jur\\u00eddico de las Administraciones P\\u00fablicas y del Procedimiento
+        Administrativo Com\\u00fan.\",\n            \"diario\": \"Bolet\\u00edn Oficial
+        del Estado\",\n            \"fecha_publicacion\": \"20100225\",\n            \"diario_numero\":
+        \"49\",\n            \"fecha_vigencia\": \"20100226\",\n            \"vigencia_agotada\":
+        \"N\",\n            \"estado_consolidacion\": {\n                \"codigo\":
+        \"3\",\n                \"texto\": \"Finalizado\"\n            },\n            \"url_eli\":
+        \"https:\\/\\/www.boe.es\\/eli\\/es\\/rd\\/2010\\/02\\/12\\/137\",\n            \"url_html_consolidada\":
+        \"https:\\/\\/www.boe.es\\/buscar\\/act.php?id=BOE-A-2010-3034\"\n        },\n
+        \       {\n            \"fecha_actualizacion\": \"20251218T194056Z\",\n            \"identificador\":
+        \"BOE-A-2002-10229\",\n            \"ambito\": {\n                \"codigo\":
+        \"2\",\n                \"texto\": \"Auton\\u00f3mico\"\n            },\n
+        \           \"departamento\": {\n                \"codigo\": \"8100\",\n                \"texto\":
+        \"Comunidad Aut\\u00f3noma de la Regi\\u00f3n de Murcia\"\n            },\n
+        \           \"rango\": {\n                \"codigo\": \"1300\",\n                \"texto\":
+        \"Ley\"\n            },\n            \"fecha_disposicion\": \"20020320\",\n
+        \           \"numero_oficial\": \"1\\/2002\",\n            \"titulo\": \"Ley
+        1\\/2002, de 20 de marzo, de Adecuaci\\u00f3n de los Procedimientos de la
+        Administraci\\u00f3n Regional de Murcia a la Ley 30\\/1992, de 26 de noviembre,
+        de R\\u00e9gimen Jur\\u00eddico de las Administraciones P\\u00fablicas y del
+        Procedimiento Administrativo Com\\u00fan.\",\n            \"diario\": \"Bolet\\u00edn
+        Oficial del Estado\",\n            \"fecha_publicacion\": \"20020529\",\n
+        \           \"diario_numero\": \"128\",\n            \"fecha_vigencia\": \"20020331\",\n
+        \           \"vigencia_agotada\": \"N\",\n            \"estado_consolidacion\":
+        {\n                \"codigo\": \"3\",\n                \"texto\": \"Finalizado\"\n
+        \           },\n            \"url_eli\": \"https:\\/\\/www.boe.es\\/eli\\/es-mc\\/l\\/2002\\/03\\/20\\/1\",\n
+        \           \"url_html_consolidada\": \"https:\\/\\/www.boe.es\\/buscar\\/act.php?id=BOE-A-2002-10229\"\n
+        \       },\n        {\n            \"fecha_actualizacion\": \"20251218T190524Z\",\n
+        \           \"identificador\": \"BOE-A-2001-14560\",\n            \"ambito\":
+        {\n                \"codigo\": \"2\",\n                \"texto\": \"Auton\\u00f3mico\"\n
+        \           },\n            \"departamento\": {\n                \"codigo\":
+        \"8090\",\n                \"texto\": \"Comunidad Aut\\u00f3noma de Galicia\"\n
+        \           },\n            \"rango\": {\n                \"codigo\": \"1300\",\n
+        \               \"texto\": \"Ley\"\n            },\n            \"fecha_disposicion\":
+        \"20010629\",\n            \"numero_oficial\": \"6\\/2001\",\n            \"titulo\":
+        \"Ley 6\\/2001, de 29 de junio, de adecuaci\\u00f3n de la normativa de la
+        Comunidad Aut\\u00f3noma de Galicia a la Ley 4\\/1999, de 13 de enero, de
+        modificaci\\u00f3n de la Ley 30\\/1992, de 26 de noviembre, de R\\u00e9gimen
+        Jur\\u00eddico de las Administraciones P\\u00fablicas y del Procedimiento
+        Administrativo Com\\u00fan.\",\n            \"diario\": \"Bolet\\u00edn Oficial
+        del Estado\",\n            \"fecha_publicacion\": \"20010726\",\n            \"diario_numero\":
+        \"178\",\n            \"fecha_vigencia\": \"20010713\",\n            \"vigencia_agotada\":
+        \"N\",\n            \"estado_consolidacion\": {\n                \"codigo\":
+        \"3\",\n                \"texto\": \"Finalizado\"\n            },\n            \"url_eli\":
+        \"https:\\/\\/www.boe.es\\/eli\\/es-ga\\/l\\/2001\\/06\\/29\\/6\",\n            \"url_html_consolidada\":
+        \"https:\\/\\/www.boe.es\\/buscar\\/act.php?id=BOE-A-2001-14560\"\n        },\n
+        \       {\n            \"fecha_actualizacion\": \"20251218T180309Z\",\n            \"identificador\":
+        \"BOE-A-1999-847\",\n            \"ambito\": {\n                \"codigo\":
+        \"1\",\n                \"texto\": \"Estatal\"\n            },\n            \"departamento\":
+        {\n                \"codigo\": \"7723\",\n                \"texto\": \"Jefatura
+        del Estado\"\n            },\n            \"rango\": {\n                \"codigo\":
+        \"1300\",\n                \"texto\": \"Ley\"\n            },\n            \"fecha_disposicion\":
+        \"19990113\",\n            \"numero_oficial\": \"4\\/1999\",\n            \"titulo\":
+        \"Ley 4\\/1999, de 13 de enero, de modificaci\\u00f3n de la Ley 30\\/1992,
+        de 26 de noviembre, de R\\u00e9gimen Jur\\u00eddico de las Administraciones
+        P\\u00fablicas y del Procedimiento Administrativo Com\\u00fan.\",\n            \"diario\":
+        \"Bolet\\u00edn Oficial del Estado\",\n            \"fecha_publicacion\":
+        \"19990114\",\n            \"diario_numero\": \"12\",\n            \"fecha_vigencia\":
+        \"19990414\",\n            \"vigencia_agotada\": \"N\",\n            \"estado_consolidacion\":
+        {\n                \"codigo\": \"3\",\n                \"texto\": \"Finalizado\"\n
+        \           },\n            \"url_eli\": \"https:\\/\\/www.boe.es\\/eli\\/es\\/l\\/1999\\/01\\/13\\/4\",\n
+        \           \"url_html_consolidada\": \"https:\\/\\/www.boe.es\\/buscar\\/act.php?id=BOE-A-1999-847\"\n
+        \       },\n        {\n            \"fecha_actualizacion\": \"20251217T212232Z\",\n
+        \           \"identificador\": \"BOE-A-1994-19267\",\n            \"ambito\":
+        {\n                \"codigo\": \"1\",\n                \"texto\": \"Estatal\"\n
+        \           },\n            \"departamento\": {\n                \"codigo\":
+        \"4820\",\n                \"texto\": \"Ministerio de Justicia e Interior\"\n
+        \           },\n            \"rango\": {\n                \"codigo\": \"1340\",\n
+        \               \"texto\": \"Real Decreto\"\n            },\n            \"fecha_disposicion\":
+        \"19940805\",\n            \"numero_oficial\": \"1810\\/1994\",\n            \"titulo\":
+        \"Real Decreto 1810\\/1994, de 5 de agosto, por el que se adecuan los procedimientos
+        de Mutualismo Judicial y Fondo Especial de la Mutualidad General Judicial
+        a la Ley 30\\/1992, de 26 de noviembre, de R\\u00e9gimen Jur\\u00eddico de
+        las Administraciones P\\u00fablicas y del Procedimiento Administrativo Com\\u00fan.\",\n
+        \           \"diario\": \"Bolet\\u00edn Oficial del Estado\",\n            \"fecha_publicacion\":
+        \"19940820\",\n            \"diario_numero\": \"199\",\n            \"fecha_vigencia\":
+        \"19940821\",\n            \"vigencia_agotada\": \"N\",\n            \"estado_consolidacion\":
+        {\n                \"codigo\": \"3\",\n                \"texto\": \"Finalizado\"\n
+        \           },\n            \"url_eli\": \"https:\\/\\/www.boe.es\\/eli\\/es\\/rd\\/1994\\/08\\/05\\/1810\",\n
+        \           \"url_html_consolidada\": \"https:\\/\\/www.boe.es\\/buscar\\/act.php?id=BOE-A-1994-19267\"\n
+        \       }\n    ]\n}"
+    headers:
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length,Content-Range
+      age:
+      - '4'
+      content-length:
+      - '8268'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jul 2026 19:37:00 GMT
+      strict-transport-security:
+      - max-age=31536000
+      vary:
+      - Accept
+    status:
+      code: 200
+      message: OK
+version: 1

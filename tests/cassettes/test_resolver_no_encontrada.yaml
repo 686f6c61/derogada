@@ -1,0 +1,47 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - www.boe.es
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A+%7B%22query_string%22%3A+%7B%22query%22%3A+%22titulo%3A%28Ley+999%2F2099%29%22%7D%7D%7D&limit=6&offset=0
+  response:
+    body:
+      string: "{\n    \"status\": {\n        \"code\": \"200\",\n        \"text\":
+        \"ok\"\n    },\n    \"data\": \"\"\n}"
+    headers:
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length,Content-Range
+      age:
+      - '0'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jul 2026 19:37:05 GMT
+      strict-transport-security:
+      - max-age=31536000
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept
+    status:
+      code: 200
+      message: OK
+version: 1

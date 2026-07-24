@@ -1,0 +1,40 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ---- Caché local de derogada ----
+.derogada-cache/
+
+# ---- Claves y secretos (NUNCA commitear) ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+*.keystore
+id_rsa*
+id_ed25519*
+secrets.json
+credentials.json
+cloudflare.ini
+
+# ---- Documentación interna (no pública) ----
+PLAN.md
+
+# ---- Sistema ----
+.DS_Store
+Thumbs.db
+*.log

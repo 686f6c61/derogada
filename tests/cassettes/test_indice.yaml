@@ -1,0 +1,750 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - www.boe.es
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1992-26318/texto/indice
+  response:
+    body:
+      string: "{\n    \"status\": {\n        \"code\": \"200\",\n        \"text\":
+        \"ok\"\n    },\n    \"data\": [\n        {\n            \"bloque\": [\n                {\n
+        \                   \"id\": \"no\",\n                    \"titulo\": \"\",\n
+        \                   \"fecha_actualizacion\": \"20151002\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/no\"\n
+        \               },\n                {\n                    \"id\": \"preambulo\",\n
+        \                   \"titulo\": \"\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/preambulo\"\n
+        \               },\n                {\n                    \"id\": \"tpreliminar\",\n
+        \                   \"titulo\": \"T\\u00edtulo preliminar\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tpreliminar\"\n
+        \               },\n                {\n                    \"id\": \"a1\",\n
+        \                   \"titulo\": \"Art\\u00edculo 1\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a1\"\n
+        \               },\n                {\n                    \"id\": \"a2\",\n
+        \                   \"titulo\": \"Art\\u00edculo 2\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a2\"\n
+        \               },\n                {\n                    \"id\": \"a3\",\n
+        \                   \"titulo\": \"Art\\u00edculo 3\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a3\"\n
+        \               },\n                {\n                    \"id\": \"ti\",\n
+        \                   \"titulo\": \"T\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ti\"\n
+        \               },\n                {\n                    \"id\": \"a4\",\n
+        \                   \"titulo\": \"Art\\u00edculo 4\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a4\"\n
+        \               },\n                {\n                    \"id\": \"a5\",\n
+        \                   \"titulo\": \"Art\\u00edculo 5\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a5\"\n
+        \               },\n                {\n                    \"id\": \"a6\",\n
+        \                   \"titulo\": \"Art\\u00edculo 6\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a6\"\n
+        \               },\n                {\n                    \"id\": \"a7\",\n
+        \                   \"titulo\": \"Art\\u00edculo 7\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a7\"\n
+        \               },\n                {\n                    \"id\": \"a8\",\n
+        \                   \"titulo\": \"Art\\u00edculo 8\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a8\"\n
+        \               },\n                {\n                    \"id\": \"a9\",\n
+        \                   \"titulo\": \"Art\\u00edculo 9\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a9\"\n
+        \               },\n                {\n                    \"id\": \"a10\",\n
+        \                   \"titulo\": \"Art\\u00edculo 10\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a10\"\n
+        \               },\n                {\n                    \"id\": \"tii\",\n
+        \                   \"titulo\": \"T\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tii\"\n
+        \               },\n                {\n                    \"id\": \"ci\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ci\"\n
+        \               },\n                {\n                    \"id\": \"a11\",\n
+        \                   \"titulo\": \"Art\\u00edculo 11\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a11\"\n
+        \               },\n                {\n                    \"id\": \"a12\",\n
+        \                   \"titulo\": \"Art\\u00edculo 12\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a12\"\n
+        \               },\n                {\n                    \"id\": \"a13\",\n
+        \                   \"titulo\": \"Art\\u00edculo 13\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a13\"\n
+        \               },\n                {\n                    \"id\": \"a14\",\n
+        \                   \"titulo\": \"Art\\u00edculo 14\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a14\"\n
+        \               },\n                {\n                    \"id\": \"a15\",\n
+        \                   \"titulo\": \"Art\\u00edculo 15\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a15\"\n
+        \               },\n                {\n                    \"id\": \"a16\",\n
+        \                   \"titulo\": \"Art\\u00edculo 16\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a16\"\n
+        \               },\n                {\n                    \"id\": \"a17\",\n
+        \                   \"titulo\": \"Art\\u00edculo 17\",\n                    \"fecha_actualizacion\":
+        \"19990427\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a17\"\n
+        \               },\n                {\n                    \"id\": \"a18\",\n
+        \                   \"titulo\": \"Art\\u00edculo 18\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a18\"\n
+        \               },\n                {\n                    \"id\": \"a19\",\n
+        \                   \"titulo\": \"Art\\u00edculo 19\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a19\"\n
+        \               },\n                {\n                    \"id\": \"a20\",\n
+        \                   \"titulo\": \"Art\\u00edculo 20\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a20\"\n
+        \               },\n                {\n                    \"id\": \"a21\",\n
+        \                   \"titulo\": \"Art\\u00edculo 21\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a21\"\n
+        \               },\n                {\n                    \"id\": \"cii\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cii\"\n
+        \               },\n                {\n                    \"id\": \"a22\",\n
+        \                   \"titulo\": \"Art\\u00edculo 22\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a22\"\n
+        \               },\n                {\n                    \"id\": \"a23\",\n
+        \                   \"titulo\": \"Art\\u00edculo 23\",\n                    \"fecha_actualizacion\":
+        \"19990427\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a23\"\n
+        \               },\n                {\n                    \"id\": \"a24\",\n
+        \                   \"titulo\": \"Art\\u00edculo 24\",\n                    \"fecha_actualizacion\":
+        \"19990427\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a24\"\n
+        \               },\n                {\n                    \"id\": \"a25\",\n
+        \                   \"titulo\": \"Art\\u00edculo 25\",\n                    \"fecha_actualizacion\":
+        \"19990427\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a25\"\n
+        \               },\n                {\n                    \"id\": \"a26\",\n
+        \                   \"titulo\": \"Art\\u00edculo 26\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a26\"\n
+        \               },\n                {\n                    \"id\": \"a27\",\n
+        \                   \"titulo\": \"Art\\u00edculo 27\",\n                    \"fecha_actualizacion\":
+        \"19990427\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a27\"\n
+        \               },\n                {\n                    \"id\": \"ciii\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo III\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ciii\"\n
+        \               },\n                {\n                    \"id\": \"a28\",\n
+        \                   \"titulo\": \"Art\\u00edculo 28\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a28\"\n
+        \               },\n                {\n                    \"id\": \"a29\",\n
+        \                   \"titulo\": \"Art\\u00edculo 29\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a29\"\n
+        \               },\n                {\n                    \"id\": \"tiii\",\n
+        \                   \"titulo\": \"T\\u00edtulo III\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tiii\"\n
+        \               },\n                {\n                    \"id\": \"a30\",\n
+        \                   \"titulo\": \"Art\\u00edculo 30\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a30\"\n
+        \               },\n                {\n                    \"id\": \"a31\",\n
+        \                   \"titulo\": \"Art\\u00edculo 31\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a31\"\n
+        \               },\n                {\n                    \"id\": \"a32\",\n
+        \                   \"titulo\": \"Art\\u00edculo 32\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a32\"\n
+        \               },\n                {\n                    \"id\": \"a33\",\n
+        \                   \"titulo\": \"Art\\u00edculo 33\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a33\"\n
+        \               },\n                {\n                    \"id\": \"a34\",\n
+        \                   \"titulo\": \"Art\\u00edculo 34\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a34\"\n
+        \               },\n                {\n                    \"id\": \"tiv\",\n
+        \                   \"titulo\": \"T\\u00edtulo IV\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tiv\"\n
+        \               },\n                {\n                    \"id\": \"ci-2\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ci-2\"\n
+        \               },\n                {\n                    \"id\": \"a35\",\n
+        \                   \"titulo\": \"Art\\u00edculo 35\",\n                    \"fecha_actualizacion\":
+        \"20131210\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a35\"\n
+        \               },\n                {\n                    \"id\": \"a36\",\n
+        \                   \"titulo\": \"Art\\u00edculo 36\",\n                    \"fecha_actualizacion\":
+        \"19990427\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a36\"\n
+        \               },\n                {\n                    \"id\": \"a37\",\n
+        \                   \"titulo\": \"Art\\u00edculo 37\",\n                    \"fecha_actualizacion\":
+        \"20131210\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a37\"\n
+        \               },\n                {\n                    \"id\": \"a38\",\n
+        \                   \"titulo\": \"Art\\u00edculo 38\",\n                    \"fecha_actualizacion\":
+        \"20110707\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a38\"\n
+        \               },\n                {\n                    \"id\": \"a39\",\n
+        \                   \"titulo\": \"Art\\u00edculo 39\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a39\"\n
+        \               },\n                {\n                    \"id\": \"a39bis\",\n
+        \                   \"titulo\": \"Art\\u00edculo 39 bis\",\n                    \"fecha_actualizacion\":
+        \"20091223\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a39bis\"\n
+        \               },\n                {\n                    \"id\": \"a40\",\n
+        \                   \"titulo\": \"Art\\u00edculo 40\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a40\"\n
+        \               },\n                {\n                    \"id\": \"a41\",\n
+        \                   \"titulo\": \"Art\\u00edculo 41\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a41\"\n
+        \               },\n                {\n                    \"id\": \"a42\",\n
+        \                   \"titulo\": \"Art\\u00edculo 42\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a42\"\n
+        \               },\n                {\n                    \"id\": \"a43\",\n
+        \                   \"titulo\": \"Art\\u00edculo 43\",\n                    \"fecha_actualizacion\":
+        \"20091223\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a43\"\n
+        \               },\n                {\n                    \"id\": \"a44\",\n
+        \                   \"titulo\": \"Art\\u00edculo 44\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a44\"\n
+        \               },\n                {\n                    \"id\": \"a45\",\n
+        \                   \"titulo\": \"Art\\u00edculo 45\",\n                    \"fecha_actualizacion\":
+        \"20070623\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a45\"\n
+        \               },\n                {\n                    \"id\": \"a46\",\n
+        \                   \"titulo\": \"Art\\u00edculo 46\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a46\"\n
+        \               },\n                {\n                    \"id\": \"cii-2\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cii-2\"\n
+        \               },\n                {\n                    \"id\": \"a47\",\n
+        \                   \"titulo\": \"Art\\u00edculo 47\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a47\"\n
+        \               },\n                {\n                    \"id\": \"a48\",\n
+        \                   \"titulo\": \"Art\\u00edculo 48\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a48\"\n
+        \               },\n                {\n                    \"id\": \"a49\",\n
+        \                   \"titulo\": \"Art\\u00edculo 49\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a49\"\n
+        \               },\n                {\n                    \"id\": \"a50\",\n
+        \                   \"titulo\": \"Art\\u00edculo 50\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a50\"\n
+        \               },\n                {\n                    \"id\": \"tv\",\n
+        \                   \"titulo\": \"T\\u00edtulo V\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tv\"\n
+        \               },\n                {\n                    \"id\": \"ci-3\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ci-3\"\n
+        \               },\n                {\n                    \"id\": \"a51\",\n
+        \                   \"titulo\": \"Art\\u00edculo 51\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a51\"\n
+        \               },\n                {\n                    \"id\": \"a52\",\n
+        \                   \"titulo\": \"Art\\u00edculo 52\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a52\"\n
+        \               },\n                {\n                    \"id\": \"cii-3\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cii-3\"\n
+        \               },\n                {\n                    \"id\": \"a53\",\n
+        \                   \"titulo\": \"Art\\u00edculo 53\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a53\"\n
+        \               },\n                {\n                    \"id\": \"a54\",\n
+        \                   \"titulo\": \"Art\\u00edculo 54\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a54\"\n
+        \               },\n                {\n                    \"id\": \"a55\",\n
+        \                   \"titulo\": \"Art\\u00edculo 55\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a55\"\n
+        \               },\n                {\n                    \"id\": \"ciii-2\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo III\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ciii-2\"\n
+        \               },\n                {\n                    \"id\": \"a56\",\n
+        \                   \"titulo\": \"Art\\u00edculo 56\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a56\"\n
+        \               },\n                {\n                    \"id\": \"a57\",\n
+        \                   \"titulo\": \"Art\\u00edculo 57\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a57\"\n
+        \               },\n                {\n                    \"id\": \"a58\",\n
+        \                   \"titulo\": \"Art\\u00edculo 58\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a58\"\n
+        \               },\n                {\n                    \"id\": \"a59\",\n
+        \                   \"titulo\": \"Art\\u00edculo 59\",\n                    \"fecha_actualizacion\":
+        \"20140917\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a59\"\n
+        \               },\n                {\n                    \"id\": \"a60\",\n
+        \                   \"titulo\": \"Art\\u00edculo 60\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a60\"\n
+        \               },\n                {\n                    \"id\": \"a61\",\n
+        \                   \"titulo\": \"Art\\u00edculo 61\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a61\"\n
+        \               },\n                {\n                    \"id\": \"civ\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo IV\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/civ\"\n
+        \               },\n                {\n                    \"id\": \"a62\",\n
+        \                   \"titulo\": \"Art\\u00edculo 62\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a62\"\n
+        \               },\n                {\n                    \"id\": \"a63\",\n
+        \                   \"titulo\": \"Art\\u00edculo 63\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a63\"\n
+        \               },\n                {\n                    \"id\": \"a64\",\n
+        \                   \"titulo\": \"Art\\u00edculo 64\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a64\"\n
+        \               },\n                {\n                    \"id\": \"a65\",\n
+        \                   \"titulo\": \"Art\\u00edculo 65\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a65\"\n
+        \               },\n                {\n                    \"id\": \"a66\",\n
+        \                   \"titulo\": \"Art\\u00edculo 66\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a66\"\n
+        \               },\n                {\n                    \"id\": \"a67\",\n
+        \                   \"titulo\": \"Art\\u00edculo 67\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a67\"\n
+        \               },\n                {\n                    \"id\": \"tvi\",\n
+        \                   \"titulo\": \"T\\u00edtulo VI\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tvi\"\n
+        \               },\n                {\n                    \"id\": \"ci-4\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ci-4\"\n
+        \               },\n                {\n                    \"id\": \"a68\",\n
+        \                   \"titulo\": \"Art\\u00edculo 68\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a68\"\n
+        \               },\n                {\n                    \"id\": \"a69\",\n
+        \                   \"titulo\": \"Art\\u00edculo 69\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a69\"\n
+        \               },\n                {\n                    \"id\": \"a70\",\n
+        \                   \"titulo\": \"Art\\u00edculo 70\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a70\"\n
+        \               },\n                {\n                    \"id\": \"a71\",\n
+        \                   \"titulo\": \"Art\\u00edculo 71\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a71\"\n
+        \               },\n                {\n                    \"id\": \"a71bis\",\n
+        \                   \"titulo\": \"Art\\u00edculo 71 bis\",\n                    \"fecha_actualizacion\":
+        \"20091223\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a71bis\"\n
+        \               },\n                {\n                    \"id\": \"a72\",\n
+        \                   \"titulo\": \"Art\\u00edculo 72\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a72\"\n
+        \               },\n                {\n                    \"id\": \"a73\",\n
+        \                   \"titulo\": \"Art\\u00edculo 73\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a73\"\n
+        \               },\n                {\n                    \"id\": \"cii-4\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cii-4\"\n
+        \               },\n                {\n                    \"id\": \"a74\",\n
+        \                   \"titulo\": \"Art\\u00edculo 74\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a74\"\n
+        \               },\n                {\n                    \"id\": \"a75\",\n
+        \                   \"titulo\": \"Art\\u00edculo 75\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a75\"\n
+        \               },\n                {\n                    \"id\": \"a76\",\n
+        \                   \"titulo\": \"Art\\u00edculo 76\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a76\"\n
+        \               },\n                {\n                    \"id\": \"a77\",\n
+        \                   \"titulo\": \"Art\\u00edculo 77\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a77\"\n
+        \               },\n                {\n                    \"id\": \"ciii-3\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo III\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ciii-3\"\n
+        \               },\n                {\n                    \"id\": \"s1\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 1\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s1\"\n
+        \               },\n                {\n                    \"id\": \"a78\",\n
+        \                   \"titulo\": \"Art\\u00edculo 78\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a78\"\n
+        \               },\n                {\n                    \"id\": \"a79\",\n
+        \                   \"titulo\": \"Art\\u00edculo 79\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a79\"\n
+        \               },\n                {\n                    \"id\": \"s2\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 2\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s2\"\n
+        \               },\n                {\n                    \"id\": \"a80\",\n
+        \                   \"titulo\": \"Art\\u00edculo 80\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a80\"\n
+        \               },\n                {\n                    \"id\": \"a81\",\n
+        \                   \"titulo\": \"Art\\u00edculo 81\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a81\"\n
+        \               },\n                {\n                    \"id\": \"s3\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 3\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s3\"\n
+        \               },\n                {\n                    \"id\": \"a82\",\n
+        \                   \"titulo\": \"Art\\u00edculo 82\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a82\"\n
+        \               },\n                {\n                    \"id\": \"a83\",\n
+        \                   \"titulo\": \"Art\\u00edculo 83\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a83\"\n
+        \               },\n                {\n                    \"id\": \"s4\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 4\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s4\"\n
+        \               },\n                {\n                    \"id\": \"a84\",\n
+        \                   \"titulo\": \"Art\\u00edculo 84\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a84\"\n
+        \               },\n                {\n                    \"id\": \"a85\",\n
+        \                   \"titulo\": \"Art\\u00edculo 85\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a85\"\n
+        \               },\n                {\n                    \"id\": \"a86\",\n
+        \                   \"titulo\": \"Art\\u00edculo 86\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a86\"\n
+        \               },\n                {\n                    \"id\": \"civ-2\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo IV\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/civ-2\"\n
+        \               },\n                {\n                    \"id\": \"s1-2\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 1\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s1-2\"\n
+        \               },\n                {\n                    \"id\": \"a87\",\n
+        \                   \"titulo\": \"Art\\u00edculo 87\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a87\"\n
+        \               },\n                {\n                    \"id\": \"a88\",\n
+        \                   \"titulo\": \"Art\\u00edculo 88\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a88\"\n
+        \               },\n                {\n                    \"id\": \"s2-2\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 2\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s2-2\"\n
+        \               },\n                {\n                    \"id\": \"a89\",\n
+        \                   \"titulo\": \"Art\\u00edculo 89\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a89\"\n
+        \               },\n                {\n                    \"id\": \"s3-2\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 3\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s3-2\"\n
+        \               },\n                {\n                    \"id\": \"a90\",\n
+        \                   \"titulo\": \"Art\\u00edculo 90\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a90\"\n
+        \               },\n                {\n                    \"id\": \"a91\",\n
+        \                   \"titulo\": \"Art\\u00edculo 91\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a91\"\n
+        \               },\n                {\n                    \"id\": \"s4-2\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 4\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s4-2\"\n
+        \               },\n                {\n                    \"id\": \"a92\",\n
+        \                   \"titulo\": \"Art\\u00edculo 92\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a92\"\n
+        \               },\n                {\n                    \"id\": \"cv\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo V\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cv\"\n
+        \               },\n                {\n                    \"id\": \"a93\",\n
+        \                   \"titulo\": \"Art\\u00edculo 93\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a93\"\n
+        \               },\n                {\n                    \"id\": \"a94\",\n
+        \                   \"titulo\": \"Art\\u00edculo 94\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a94\"\n
+        \               },\n                {\n                    \"id\": \"a95\",\n
+        \                   \"titulo\": \"Art\\u00edculo 95\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a95\"\n
+        \               },\n                {\n                    \"id\": \"a96\",\n
+        \                   \"titulo\": \"Art\\u00edculo 96\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a96\"\n
+        \               },\n                {\n                    \"id\": \"a97\",\n
+        \                   \"titulo\": \"Art\\u00edculo 97\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a97\"\n
+        \               },\n                {\n                    \"id\": \"a98\",\n
+        \                   \"titulo\": \"Art\\u00edculo 98\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a98\"\n
+        \               },\n                {\n                    \"id\": \"a99\",\n
+        \                   \"titulo\": \"Art\\u00edculo 99\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a99\"\n
+        \               },\n                {\n                    \"id\": \"a100\",\n
+        \                   \"titulo\": \"Art\\u00edculo 100\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a100\"\n
+        \               },\n                {\n                    \"id\": \"a101\",\n
+        \                   \"titulo\": \"Art\\u00edculo 101\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a101\"\n
+        \               },\n                {\n                    \"id\": \"tvii\",\n
+        \                   \"titulo\": \"T\\u00edtulo VII\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tvii\"\n
+        \               },\n                {\n                    \"id\": \"ci-5\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ci-5\"\n
+        \               },\n                {\n                    \"id\": \"a102\",\n
+        \                   \"titulo\": \"Art\\u00edculo 102\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a102\"\n
+        \               },\n                {\n                    \"id\": \"a103\",\n
+        \                   \"titulo\": \"Art\\u00edculo 103\",\n                    \"fecha_actualizacion\":
+        \"20031231\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a103\"\n
+        \               },\n                {\n                    \"id\": \"a104\",\n
+        \                   \"titulo\": \"Art\\u00edculo 104\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a104\"\n
+        \               },\n                {\n                    \"id\": \"a105\",\n
+        \                   \"titulo\": \"Art\\u00edculo 105\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a105\"\n
+        \               },\n                {\n                    \"id\": \"a106\",\n
+        \                   \"titulo\": \"Art\\u00edculo 106\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a106\"\n
+        \               },\n                {\n                    \"id\": \"cii-5\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cii-5\"\n
+        \               },\n                {\n                    \"id\": \"s1-3\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 1\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s1-3\"\n
+        \               },\n                {\n                    \"id\": \"a107\",\n
+        \                   \"titulo\": \"Art\\u00edculo 107\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a107\"\n
+        \               },\n                {\n                    \"id\": \"a108\",\n
+        \                   \"titulo\": \"Art\\u00edculo 108\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a108\"\n
+        \               },\n                {\n                    \"id\": \"a109\",\n
+        \                   \"titulo\": \"Art\\u00edculo 109\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a109\"\n
+        \               },\n                {\n                    \"id\": \"a110\",\n
+        \                   \"titulo\": \"Art\\u00edculo 110\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a110\"\n
+        \               },\n                {\n                    \"id\": \"a111\",\n
+        \                   \"titulo\": \"Art\\u00edculo 111\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a111\"\n
+        \               },\n                {\n                    \"id\": \"a112\",\n
+        \                   \"titulo\": \"Art\\u00edculo 112\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a112\"\n
+        \               },\n                {\n                    \"id\": \"a113\",\n
+        \                   \"titulo\": \"Art\\u00edculo 113\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a113\"\n
+        \               },\n                {\n                    \"id\": \"s2-3\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 2\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s2-3\"\n
+        \               },\n                {\n                    \"id\": \"a114\",\n
+        \                   \"titulo\": \"Art\\u00edculo 114\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a114\"\n
+        \               },\n                {\n                    \"id\": \"a115\",\n
+        \                   \"titulo\": \"Art\\u00edculo 115\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a115\"\n
+        \               },\n                {\n                    \"id\": \"s3-3\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 3\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s3-3\"\n
+        \               },\n                {\n                    \"id\": \"a116\",\n
+        \                   \"titulo\": \"Art\\u00edculo 116\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a116\"\n
+        \               },\n                {\n                    \"id\": \"a117\",\n
+        \                   \"titulo\": \"Art\\u00edculo 117\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a117\"\n
+        \               },\n                {\n                    \"id\": \"s3-4\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 3\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s3-4\"\n
+        \               },\n                {\n                    \"id\": \"s4-3\",\n
+        \                   \"titulo\": \"Secci\\u00f3n 4\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/s4-3\"\n
+        \               },\n                {\n                    \"id\": \"a118\",\n
+        \                   \"titulo\": \"Art\\u00edculo 118\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a118\"\n
+        \               },\n                {\n                    \"id\": \"a119\",\n
+        \                   \"titulo\": \"Art\\u00edculo 119\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a119\"\n
+        \               },\n                {\n                    \"id\": \"tviii\",\n
+        \                   \"titulo\": \"T\\u00edtulo VIII\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tviii\"\n
+        \               },\n                {\n                    \"id\": \"ci-6\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ci-6\"\n
+        \               },\n                {\n                    \"id\": \"a120\",\n
+        \                   \"titulo\": \"Art\\u00edculo 120\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a120\"\n
+        \               },\n                {\n                    \"id\": \"a121\",\n
+        \                   \"titulo\": \"Art\\u00edculo 121\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a121\"\n
+        \               },\n                {\n                    \"id\": \"cii-6\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cii-6\"\n
+        \               },\n                {\n                    \"id\": \"a122\",\n
+        \                   \"titulo\": \"Art\\u00edculo 122\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a122\"\n
+        \               },\n                {\n                    \"id\": \"a123\",\n
+        \                   \"titulo\": \"Art\\u00edculo 123\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a123\"\n
+        \               },\n                {\n                    \"id\": \"a124\",\n
+        \                   \"titulo\": \"Art\\u00edculo 124\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a124\"\n
+        \               },\n                {\n                    \"id\": \"ciii-4\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo III\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ciii-4\"\n
+        \               },\n                {\n                    \"id\": \"a125\",\n
+        \                   \"titulo\": \"Art\\u00edculo 125\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a125\"\n
+        \               },\n                {\n                    \"id\": \"a126\",\n
+        \                   \"titulo\": \"Art\\u00edculo 126\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a126\"\n
+        \               },\n                {\n                    \"id\": \"tix\",\n
+        \                   \"titulo\": \"T\\u00edtulo IX\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tix\"\n
+        \               },\n                {\n                    \"id\": \"ci-7\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ci-7\"\n
+        \               },\n                {\n                    \"id\": \"a127\",\n
+        \                   \"titulo\": \"Art\\u00edculo 127\",\n                    \"fecha_actualizacion\":
+        \"20031217\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a127\"\n
+        \               },\n                {\n                    \"id\": \"a128\",\n
+        \                   \"titulo\": \"Art\\u00edculo 128\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a128\"\n
+        \               },\n                {\n                    \"id\": \"a129\",\n
+        \                   \"titulo\": \"Art\\u00edculo 129\",\n                    \"fecha_actualizacion\":
+        \"20031217\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a129\"\n
+        \               },\n                {\n                    \"id\": \"a130\",\n
+        \                   \"titulo\": \"Art\\u00edculo 130\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a130\"\n
+        \               },\n                {\n                    \"id\": \"a131\",\n
+        \                   \"titulo\": \"Art\\u00edculo 131\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a131\"\n
+        \               },\n                {\n                    \"id\": \"a132\",\n
+        \                   \"titulo\": \"Art\\u00edculo 132\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a132\"\n
+        \               },\n                {\n                    \"id\": \"a133\",\n
+        \                   \"titulo\": \"Art\\u00edculo 133\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a133\"\n
+        \               },\n                {\n                    \"id\": \"cii-7\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cii-7\"\n
+        \               },\n                {\n                    \"id\": \"a134\",\n
+        \                   \"titulo\": \"Art\\u00edculo 134\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a134\"\n
+        \               },\n                {\n                    \"id\": \"a135\",\n
+        \                   \"titulo\": \"Art\\u00edculo 135\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a135\"\n
+        \               },\n                {\n                    \"id\": \"a136\",\n
+        \                   \"titulo\": \"Art\\u00edculo 136\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a136\"\n
+        \               },\n                {\n                    \"id\": \"a137\",\n
+        \                   \"titulo\": \"Art\\u00edculo 137\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a137\"\n
+        \               },\n                {\n                    \"id\": \"a138\",\n
+        \                   \"titulo\": \"Art\\u00edculo 138\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a138\"\n
+        \               },\n                {\n                    \"id\": \"tx\",\n
+        \                   \"titulo\": \"T\\u00edtulo X\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/tx\"\n
+        \               },\n                {\n                    \"id\": \"ci-8\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo I\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/ci-8\"\n
+        \               },\n                {\n                    \"id\": \"a139\",\n
+        \                   \"titulo\": \"Art\\u00edculo 139\",\n                    \"fecha_actualizacion\":
+        \"20091104\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a139\"\n
+        \               },\n                {\n                    \"id\": \"a140\",\n
+        \                   \"titulo\": \"Art\\u00edculo 140\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a140\"\n
+        \               },\n                {\n                    \"id\": \"a141\",\n
+        \                   \"titulo\": \"Art\\u00edculo 141\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a141\"\n
+        \               },\n                {\n                    \"id\": \"a142\",\n
+        \                   \"titulo\": \"Art\\u00edculo 142\",\n                    \"fecha_actualizacion\":
+        \"20110305\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a142\"\n
+        \               },\n                {\n                    \"id\": \"a143\",\n
+        \                   \"titulo\": \"Art\\u00edculo 143\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a143\"\n
+        \               },\n                {\n                    \"id\": \"a144\",\n
+        \                   \"titulo\": \"Art\\u00edculo 144\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a144\"\n
+        \               },\n                {\n                    \"id\": \"cii-8\",\n
+        \                   \"titulo\": \"Cap\\u00edtulo II\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/cii-8\"\n
+        \               },\n                {\n                    \"id\": \"a145\",\n
+        \                   \"titulo\": \"Art\\u00edculo 145\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a145\"\n
+        \               },\n                {\n                    \"id\": \"a146\",\n
+        \                   \"titulo\": \"Art\\u00edculo 146\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/a146\"\n
+        \               },\n                {\n                    \"id\": \"daprimera\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional primera\",\n
+        \                   \"fecha_actualizacion\": \"19921127\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/daprimera\"\n
+        \               },\n                {\n                    \"id\": \"dasegunda\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional segunda\",\n
+        \                   \"fecha_actualizacion\": \"20110707\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dasegunda\"\n
+        \               },\n                {\n                    \"id\": \"datercera\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional tercera\",\n
+        \                   \"fecha_actualizacion\": \"19930820\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/datercera\"\n
+        \               },\n                {\n                    \"id\": \"dacuarta\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional cuarta\",\n
+        \                   \"fecha_actualizacion\": \"19921127\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dacuarta\"\n
+        \               },\n                {\n                    \"id\": \"daquinta\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional quinta\",\n
+        \                   \"fecha_actualizacion\": \"19990114\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/daquinta\"\n
+        \               },\n                {\n                    \"id\": \"dasexta\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional sexta\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dasexta\"\n
+        \               },\n                {\n                    \"id\": \"daseptima\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional s\\u00e9ptima\",\n
+        \                   \"fecha_actualizacion\": \"19921127\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/daseptima\"\n
+        \               },\n                {\n                    \"id\": \"daoctava\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional octava\",\n
+        \                   \"fecha_actualizacion\": \"19921127\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/daoctava\"\n
+        \               },\n                {\n                    \"id\": \"daoctavabis\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional octava bis\",\n
+        \                   \"fecha_actualizacion\": \"20091124\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/daoctavabis\"\n
+        \               },\n                {\n                    \"id\": \"danovena\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional novena\",\n
+        \                   \"fecha_actualizacion\": \"19970415\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/danovena\"\n
+        \               },\n                {\n                    \"id\": \"dadecima\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional d\\u00e9cima\",\n
+        \                   \"fecha_actualizacion\": \"19921127\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dadecima\"\n
+        \               },\n                {\n                    \"id\": \"daundecima\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional und\\u00e9cima\",\n
+        \                   \"fecha_actualizacion\": \"19990114\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/daundecima\"\n
+        \               },\n                {\n                    \"id\": \"daduodecima\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional duod\\u00e9cima\",\n
+        \                   \"fecha_actualizacion\": \"19990114\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/daduodecima\"\n
+        \               },\n                {\n                    \"id\": \"dadecimotercera\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional decimotercera\",\n
+        \                   \"fecha_actualizacion\": \"19990114\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dadecimotercera\"\n
+        \               },\n                {\n                    \"id\": \"dadecimocuarta\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional decimocuarta\",\n
+        \                   \"fecha_actualizacion\": \"19990114\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dadecimocuarta\"\n
+        \               },\n                {\n                    \"id\": \"dadecimoquinta\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional decimoquinta\",\n
+        \                   \"fecha_actualizacion\": \"19990114\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dadecimoquinta\"\n
+        \               },\n                {\n                    \"id\": \"dadecimosexta\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional decimosexta\",\n
+        \                   \"fecha_actualizacion\": \"19990114\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dadecimosexta\"\n
+        \               },\n                {\n                    \"id\": \"dadecimoseptima\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional decimos\\u00e9ptima\",\n
+        \                   \"fecha_actualizacion\": \"19990114\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dadecimoseptima\"\n
+        \               },\n                {\n                    \"id\": \"dadecimoctava\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional decimoctava\",\n
+        \                   \"fecha_actualizacion\": \"20070623\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dadecimoctava\"\n
+        \               },\n                {\n                    \"id\": \"dadecimonovena\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional decimonovena\",\n
+        \                   \"fecha_actualizacion\": \"20031121\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dadecimonovena\"\n
+        \               },\n                {\n                    \"id\": \"davigesima\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional vig\\u00e9sima\",\n
+        \                   \"fecha_actualizacion\": \"20150613\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/davigesima\"\n
+        \               },\n                {\n                    \"id\": \"davigesimaprimera\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n adicional vig\\u00e9sima
+        primera\",\n                    \"fecha_actualizacion\": \"20140917\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/davigesimaprimera\"\n
+        \               },\n                {\n                    \"id\": \"dtprimera\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n transitoria primera\",\n
+        \                   \"fecha_actualizacion\": \"19921127\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dtprimera\"\n
+        \               },\n                {\n                    \"id\": \"dtsegunda\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n transitoria segunda\",\n
+        \                   \"fecha_actualizacion\": \"19930820\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dtsegunda\"\n
+        \               },\n                {\n                    \"id\": \"dttercera\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n transitoria tercera\",\n
+        \                   \"fecha_actualizacion\": \"20140917\",\n                    \"url\":
+        \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dttercera\"\n
+        \               },\n                {\n                    \"id\": \"dd\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n derogatoria\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/dd\"\n
+        \               },\n                {\n                    \"id\": \"df\",\n
+        \                   \"titulo\": \"Disposici\\u00f3n final\",\n                    \"fecha_actualizacion\":
+        \"19990114\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/df\"\n
+        \               },\n                {\n                    \"id\": \"firma\",\n
+        \                   \"titulo\": \"\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/firma\"\n
+        \               },\n                {\n                    \"id\": \"informacionrelacionada\",\n
+        \                   \"titulo\": \"[Informaci\\u00f3n relacionada]\",\n                    \"fecha_actualizacion\":
+        \"19921127\",\n                    \"url\": \"https:\\/\\/www.boe.es\\/datosabiertos\\/api\\/legislacion-consolidada\\/id\\/BOE-A-1992-26318\\/texto\\/bloque\\/informacionrelacionada\"\n
+        \               }\n            ]\n        }\n    ]\n}"
+    headers:
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length,Content-Range
+      age:
+      - '0'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jul 2026 19:36:56 GMT
+      strict-transport-security:
+      - max-age=31536000
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept
+    status:
+      code: 200
+      message: OK
+version: 1

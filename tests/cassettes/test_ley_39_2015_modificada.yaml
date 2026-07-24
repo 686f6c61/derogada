@@ -1,0 +1,212 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - www.boe.es
+      user-agent:
+      - derogada/0.1
+    method: GET
+    uri: https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2015-10565/analisis
+  response:
+    body:
+      string: "{\n    \"status\": {\n        \"code\": \"200\",\n        \"text\":
+        \"ok\"\n    },\n    \"data\": [\n        {\n            \"materias\": [\n
+        \               {\n                    \"materia\": {\n                        \"codigo\":
+        \"6499\",\n                        \"texto\": \"Seguridad Social\"\n                    }\n
+        \               }\n            ],\n            \"notas\": [\n                {\n
+        \                   \"nota\": [\n                        \"Entrada en vigor,
+        con la salvedad indicada, el 2 de octubre de 2016.\",\n                        \"Efectos
+        \ para las previsiones indicadas en la disposici\\u00f3n final 7: 2 de abril
+        de 2021.\"\n                    ]\n                }\n            ],\n            \"referencias\":
+        {\n                \"anteriores\": [\n                    {\n                        \"anterior\":
+        [\n                            {\n                                \"id_norma\":
+        \"BOE-A-2011-4117\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"210\",\n                                    \"texto\": \"DEROGA\"\n                                },\n
+        \                               \"texto\": \"los arts. 4 a 7 de la Ley 2\\/2011,
+        de 4 de marzo\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2009-18358\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"210\",\n                                    \"texto\":
+        \"DEROGA\"\n                                },\n                                \"texto\":
+        \", en la forma indicada, determinados preceptos del Real Decreto 1671\\/2009,
+        de 6 de noviembre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2007-12352\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"210\",\n                                    \"texto\":
+        \"DEROGA\"\n                                },\n                                \"texto\":
+        \", en la forma indicada, la Ley 11\\/2007, de 22 de junio\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1999-11499\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"210\",\n                                    \"texto\": \"DEROGA\"\n                                },\n
+        \                               \"texto\": \"el Real Decreto 772\\/1999, de
+        7 de mayo\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1993-20748\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"210\",\n                                    \"texto\":
+        \"DEROGA\"\n                                },\n                                \"texto\":
+        \"el Real Decreto 1398\\/1993, de 4 de agosto\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-1993-11253\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"210\",\n                                    \"texto\": \"DEROGA\"\n                                },\n
+        \                               \"texto\": \"el Real Decreto 429\\/1993, de
+        26 de marzo\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-1992-26318\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"210\",\n                                    \"texto\":
+        \"DEROGA\"\n                                },\n                                \"texto\":
+        \", en la forma indicada, la  Ley 30\\/1992, de 26 de noviembre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2011-15936\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"MODIFICA\"\n                                },\n
+        \                               \"texto\": \"los arts. 64, 69, 70, 72, 73,
+        85, 103 y 117 de  la Ley 36\\/2011, de 10 de octubre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2003-23399\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"MODIFICA\"\n                                },\n
+        \                               \"texto\": \"el art. 3 de la Ley 59\\/2003,
+        de 19 de diciembre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2012-5730\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"330\",\n                                    \"texto\":
+        \"CITA\"\n                                },\n                                \"texto\":
+        \"Ley Org\\u00e1nica 2\\/2012, de 27 de abril\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2003-21614\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"330\",\n                                    \"texto\": \"CITA\"\n                                },\n
+        \                               \"texto\": \"Ley 47\\/2003, de 26 de noviembre\"\n
+        \                           }\n                        ]\n                    }\n
+        \               ],\n                \"posteriores\": [\n                    {\n
+        \                       \"posterior\": [\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2020-10491\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"230\",\n                                    \"texto\":
+        \"SE DEJA SIN EFECTO\"\n                                },\n                                \"texto\":
+        \"la modificaci\\u00f3n de la disposici\\u00f3n final 7, en la redacci\\u00f3n
+        dada por el Real Decreto-ley 27\\/2020, de 4 de agosto, por Resoluci\\u00f3n
+        de 10 de septiembre de 2020\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2022-11589\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"270\",\n                                    \"texto\":
+        \"SE MODIFICA\"\n                                },\n                                \"texto\":
+        \"art. 77, por Ley 15\\/2022, de 12 de julio\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2022-10757\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"los arts. 9.2.c), 10.2.c) y SE A\\u00d1ADE la disposici\\u00f3n adicional
+        7, por Ley 11\\/2022, de 28 de junio\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2022-4972\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"270\",\n                                    \"texto\":
+        \"SE MODIFICA\"\n                                },\n                                \"texto\":
+        \"el art. 32, por Real Decreto-ley 6\\/2022, de 29 de marzo\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2021-11472\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"la disposici\\u00f3n final 7, con variaci\\u00f3n de efectos en su entrada
+        en vigor, por Ley 10\\/2021, de 9 de julio\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2020-11043\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \", con efectos desde el 23 de septiembre de 2020, la disposici\\u00f3n final
+        7, por Real Decreto-ley 28\\/2020, de 22 de septiembre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2020-9131\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"la disposici\\u00f3n final 7, por Real Decreto-ley 27\\/2020, de 4 de agosto\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2019-15790\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"los arts. 9, 10 y SE A\\u00d1ADE la disposici\\u00f3n adicional 6, por Real
+        Decreto-ley 14\\/2019, de 31 de octubre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2018-16673\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"el art. 28.2 y 3, por Ley Org\\u00e1nica 3\\/2018, de 5 de diciembre\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2018-12131\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"270\",\n                                    \"texto\": \"SE MODIFICA\"\n
+        \                               },\n                                \"texto\":
+        \"la disposici\\u00f3n final 7, por Real Decreto-ley 11\\/2018, de 31 de agosto\"\n
+        \                           },\n                            {\n                                \"id_norma\":
+        \"BOE-A-2024-22928\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"407\",\n                                    \"texto\": \"SE A\\u00d1ADE\"\n
+        \                               },\n                                \"texto\":
+        \"la disposici\\u00f3n adicional 9, por Real Decreto-ley 6\\/2024, de 5 de
+        noviembre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2022-17040\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"407\",\n                                    \"texto\":
+        \"SE A\\u00d1ADE\"\n                                },\n                                \"texto\":
+        \"la disposici\\u00f3n adicional 8, por Real Decreto-ley 18\\/2022, de 18
+        de octubre\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2021-5032\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"490\",\n                                    \"texto\":
+        \"SE DESARROLLA\"\n                                },\n                                \"texto\":
+        \", y se aprueba el Reglamento de actuaci\\u00f3n y funcionamiento del sector
+        p\\u00fablico por medios electr\\u00f3nicos: Real Decreto 203\\/2021, de 30
+        de marzo\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2021-20477\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"440\",\n                                    \"texto\":
+        \"SE DICTA DE CONFORMIDAD\"\n                                },\n                                \"texto\":
+        \"con el art. 16, y regula el Registro Electr\\u00f3nico General para la Administraci\\u00f3n
+        General del Estado: Orden PCM\\/1382\\/2021, de 9 de diciembre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2017-493\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"440\",\n                                    \"texto\": \"SE DICTA DE CONFORMIDAD\"\n
+        \                               },\n                                \"texto\":
+        \": Decreto 72\\/2016, de 23 de diciembre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2021-4570\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"331\",\n                                    \"texto\": \"SE DICTA EN RELACI\\u00d3N\"\n
+        \                               },\n                                \"texto\":
+        \"y se establecen disposici\\u00f3nes espec\\u00edficas para procedimientos
+        sancionadores en comercio y sanidad exterior, por Real Decreto 137\\/2021,
+        de 2 de marzo\"\n                            },\n                            {\n
+        \                               \"id_norma\": \"BOE-A-2018-15846\",\n                                \"relacion\":
+        {\n                                    \"codigo\": \"470\",\n                                    \"texto\":
+        \"SE DECLARA\"\n                                },\n                                \"texto\":
+        \", en el Recurso 3865\\/2016, la desestimaci\\u00f3n en relaci\\u00f3n con
+        los arts. 1 y 127 a 133, por Sentencia 110\\/2018, de 17 de octubre\"\n                            },\n
+        \                           {\n                                \"id_norma\":
+        \"BOE-A-2018-8574\",\n                                \"relacion\": {\n                                    \"codigo\":
+        \"470\",\n                                    \"texto\": \"SE DECLARA\"\n
+        \                               },\n                                \"texto\":
+        \", en el Recurso 3628\\/2016, la inconstitucionalidad y nulidad de lo indicado
+        de los arts. 6.4 y 129.4, y de la disposici\\u00f3n final 1.2; contrarios
+        al orden constitucional de competencias, los arts. 130, 132 y lo indicado
+        del 129 y 133, seg\\u00fan el fj.7.b) o c); y la constitucionalidad, en los
+        t\\u00e9rminos del fj 11.f) de la disposici\\u00f3n adicional 2.p\\u00e1rrafo
+        2, por Sentencia 55\\/2018, de 24 de mayo\"\n                            }\n
+        \                       ]\n                    }\n                ]\n            }\n
+        \       }\n    ]\n}"
+    headers:
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length,Content-Range
+      age:
+      - '4'
+      content-length:
+      - '14262'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jul 2026 19:37:00 GMT
+      strict-transport-security:
+      - max-age=31536000
+      vary:
+      - Accept
+    status:
+      code: 200
+      message: OK
+version: 1
