@@ -797,7 +797,10 @@ noviembre, del Código Penal, exige dolo directo en la apropiación.`,
   async function sparql(query) {
     if (cacheSparql.has(query)) return cacheSparql.get(query);
     const url = CELLAR + "?query=" + encodeURIComponent(query) + "&format=application%2Fsparql-results%2Bjson";
-    const vias = [url, UE_PROXY + encodeURIComponent(url)];
+    // 1) CELLAR directo (si algún día habilita CORS); 2) proxy same-origin nginx
+    // (sin terceros); 3) proxy público como último recurso.
+    const urlLocal = "/cellar-proxy?query=" + encodeURIComponent(query) + "&format=application%2Fsparql-results%2Bjson";
+    const vias = [url, urlLocal, UE_PROXY + encodeURIComponent(url)];
     for (const u of vias) {
       try {
         const r = await fetch(u, { headers: { Accept: "application/sparql-results+json" } });
