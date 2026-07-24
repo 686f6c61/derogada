@@ -117,7 +117,7 @@ pytest -q          # 51 tests con cassettes VCR grabadas: no necesita red
 ```
 
 CI: ruff + pytest en Python 3.10–3.13. Publicación en PyPI con Trusted Publishing
-al pushear un tag `v*`.
+al pushear un tag `v*`. Cambios por versión: [CHANGELOG.md](CHANGELOG.md).
 
 ## Aviso
 
