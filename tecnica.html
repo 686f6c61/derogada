@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derogada: documentación técnica</title>
+<meta name="description" content="Arquitectura, instalación, uso y fuentes oficiales de Derogada: el verificador de vigencia normativa en documentos jurídicos (BOE + EUR-Lex).">
+<link rel="canonical" href="https://derogada.686f6c61.dev/tecnica.html">
+<meta name="author" content="686f6c61">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1E5AAB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231E5AAB'/%3E%3Ctext x='50' y='78' font-size='72' text-anchor='middle' fill='white' font-family='serif'%3E%C2%A7%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://derogada.686f6c61.dev/tecnica.html">
+<meta property="og:site_name" content="derogada">
+<meta property="og:title" content="Derogada: documentación técnica">
+<meta property="og:description" content="Pipeline, fuentes oficiales (BOE + CELLAR/EUR-Lex), instalación y uso del verificador de vigencia normativa. pip install derogada">
+<meta property="og:image" content="https://derogada.686f6c61.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@686f6c61">
+<meta name="twitter:title" content="Derogada: documentación técnica">
+<meta name="twitter:description" content="Pipeline, fuentes oficiales (BOE + CELLAR/EUR-Lex), instalación y uso del verificador de vigencia normativa.">
+<meta name="twitter:image" content="https://derogada.686f6c61.dev/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1E5AAB;
+    --ink:#262C40;
+    --paper:#FFFFFF;
+    --gray:#D9D9D9;
+    --border:3px solid var(--ink);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Archivo',Helvetica,Arial,sans-serif;background:var(--gray);color:var(--ink);overflow-x:hidden}
+  ::selection{background:var(--blue);color:#fff}
+  .display{font-family:'Archivo Black','Archivo',Helvetica,sans-serif;text-transform:uppercase;line-height:.92;letter-spacing:-.01em}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+  a{color:var(--blue);font-weight:600}
+
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1rem 2rem;background:var(--paper);border-bottom:var(--border);
+    position:sticky;top:0;z-index:10;
+  }
+  .logo{display:flex;align-items:center;gap:.6rem;font-family:'Archivo Black',sans-serif;font-size:1.4rem;text-decoration:none;color:var(--ink)}
+  .logo-mark{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;background:var(--blue);color:#fff;border:var(--border);box-shadow:4px 4px 0 var(--ink);font-size:1.3rem}
+  .nav-links{font-weight:500;font-size:1rem}
+  .nav-links a{text-decoration:none;padding:.15rem .35rem;color:var(--ink)}
+  .nav-links a:hover{background:var(--blue);color:#fff}
+  .nav-links .sep{color:var(--blue);font-weight:600}
+
+  .hero{background:var(--paper);padding:4rem 2rem 3.5rem;border-bottom:var(--border)}
+  .hero-inner{max-width:1100px;margin:0 auto}
+  .hero-title{font-size:clamp(2.4rem,6vw,5rem)}
+  .hero-title .blue{color:var(--blue)}
+  .hero-sub{max-width:40rem;margin-top:1.5rem;font-size:1.05rem;line-height:1.55;font-weight:500}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+  .badge2{font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:700;border:var(--border);box-shadow:4px 4px 0 var(--ink);padding:.45rem .8rem;background:var(--paper)}
+  .badge2.blue{background:var(--blue);color:#fff}
+
+  section.block{padding:3.5rem 2rem;border-bottom:var(--border);background:var(--paper)}
+  section.block.alt{background:var(--gray)}
+  .block-inner{max-width:1100px;margin:0 auto}
+  .block-head{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:2rem}
+  .block-num{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,4vw,3.2rem);color:transparent;-webkit-text-stroke:2px var(--ink);line-height:1}
+  .block-title{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(1.5rem,3.2vw,2.6rem);line-height:1}
+  .block p{max-width:60rem;line-height:1.6;font-weight:500;margin-bottom:1rem}
+
+  pre.code{
+    background:var(--ink);color:#fff;border:var(--border);
+    box-shadow:8px 8px 0 var(--blue);
+    padding:1.2rem 1.4rem;overflow-x:auto;
+    font-family:'JetBrains Mono',monospace;font-size:.86rem;line-height:1.65;
+    margin:1.2rem 0 1.6rem;max-width:60rem;
+  }
+  pre.code .c{color:#9aa3b8}
+  pre.code .b{color:#8FB8FF;font-weight:700}
+
+  table.tech{border-collapse:collapse;width:100%;max-width:60rem;margin:1.2rem 0 1.6rem;background:var(--paper)}
+  table.tech th,table.tech td{border:2px solid var(--ink);padding:.6rem .9rem;text-align:left;vertical-align:top}
+  table.tech th{background:var(--blue);color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:.8rem;letter-spacing:.04em}
+  table.tech td{font-size:.92rem}
+  table.tech td.mono{font-size:.82rem}
+
+  .pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:1.5rem 0 1rem;max-width:64rem}
+  .stage{
+    background:var(--paper);border:var(--border);
+    box-shadow:6px 6px 0 var(--ink);
+    padding:1rem;
+  }
+  .stage .stage-name{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:.95rem;margin-bottom:.3rem}
+  .stage .stage-mod{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--blue);font-weight:700;display:block;margin-bottom:.4rem}
+  .stage .stage-desc{font-size:.8rem;line-height:1.45}
+  .stage.hl{background:var(--blue);color:#fff;box-shadow:6px 6px 0 var(--ink)}
+  .stage.hl .stage-mod{color:#fff}
+  .arrow{display:none}
+
+  ul.rules{list-style:none;max-width:60rem;margin:1rem 0 1.5rem}
+  ul.rules li{
+    border-left:6px solid var(--blue);background:var(--paper);
+    padding:.8rem 1.1rem;margin-bottom:.6rem;line-height:1.55;font-weight:500;
+  }
+  ul.rules li strong{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:.9rem}
+
+  footer{background:var(--ink);color:#c7cdd9;padding:2.5rem 2rem 3rem;font-size:.85rem;line-height:1.6}
+  .footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between}
+  .footer-links{font-family:'JetBrains Mono',monospace;font-weight:700}
+  .footer-links a{color:#fff;text-decoration:none}
+  .footer-links a:hover{background:var(--blue)}
+  hr.foot{border:none;border-top:2px solid rgba(255,255,255,.2);margin:2rem auto;max-width:1100px}
+  .foot-brand{max-width:1100px;margin:0 auto;font-family:'Archivo Black',sans-serif;font-size:1rem;color:#fff;letter-spacing:.05em}
+
+  @media (max-width:900px){
+    nav{padding:.9rem 1.2rem}
+    .nav-links{font-size:.82rem}
+    .pipeline{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><span class="logo-mark">§</span>Derogada</a>
+  <div class="nav-links">
+    <a href="index.html#como-funciona">Cómo funciona</a><span class="sep"> / </span>
+    <a href="index.html#demo">Demo</a><span class="sep"> / </span>
+    <a href="index.html#instalar">Instalar</a><span class="sep"> / </span>
+    <a href="https://github.com/686f6c61/derogada">GitHub</a><span class="sep"> / </span>
+    <a href="https://pypi.org/project/derogada/">PyPI</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="display hero-title">Documentación <span class="blue">técnica</span></h1>
+    <p class="hero-sub">
+      Cómo funciona <strong>Derogada</strong> por dentro: el pipeline, las fuentes oficiales que
+      consulta, cómo instalarlo y cómo usarlo como CLI y como biblioteca.
+    </p>
+    <div class="hero-badges">
+      <span class="badge2 blue">Python ≥ 3.10</span>
+      <span class="badge2">BOE API</span>
+      <span class="badge2">CELLAR / EUR-Lex</span>
+      <span class="badge2">LiteLLM</span>
+      <span class="badge2">51 tests · VCR offline</span>
+    </div>
+  </div>
+</header>
+
+<section class="block" id="instalacion">
+  <div class="block-inner">
+    <div class="block-head"><span class="block-num">01</span><h2 class="block-title">Instalación y configuración</h2></div>
+    <pre class="code"><span class="c"># desde PyPI</span>
+<span class="b">$</span> pip install derogada
+
+<span class="c"># desarrollo</span>
+<span class="b">$</span> python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
+
+<span class="c"># demo web opcional con IA + EUR-Lex (landing + API local en :8000)</span>
+<span class="c"># la landing ya incluye una demo 100% navegador: BOE directo (CORS) y EUR-Lex vía proxy CORS</span>
+<span class="b">$</span> .venv/bin/pip install -e ".[demo]" && .venv/bin/python demo/server.py</pre>
+    <p>La extracción funciona en <strong>dos canales</strong>: regex determinista (siempre activo,
+    sin configuración) y LLM vía LiteLLM (opcional, mejora el recall con siglas y nombres comunes).
+    Sin LLM configurado, todo sigue funcionando en modo solo-regex.</p>
+    <table class="tech">
+      <tr><th>Variable</th><th>Para qué</th><th>Ejemplo</th></tr>
+      <tr><td class="mono">DEROGADA_MODEL</td><td>Modelo LiteLLM para extracción y sugerencias</td><td class="mono">gpt-5.6 · anthropic/claude-sonnet-5 · gemini/gemini-3.5-flash · openai/qwen3.6 · ollama/llama4</td></tr>
+      <tr><td class="mono">DEROGADA_API_BASE</td><td>Endpoint OpenAI-compatible</td><td class="mono">https://api.nan.builders/v1</td></tr>
+      <tr><td class="mono">DEROGADA_API_KEY</td><td>Clave del proveedor</td><td class="mono">sk-…</td></tr>
+      <tr><td class="mono">DEROGADA_CACHE_DIR</td><td>Directorio de la caché SQLite (defecto <span class="mono">~/.cache/derogada</span>)</td><td class="mono">/tmp/derogada-cache</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="block alt" id="uso">
+  <div class="block-inner">
+    <div class="block-head"><span class="block-num">02</span><h2 class="block-title">Uso</h2></div>
+    <pre class="code"><span class="b">$</span> derogada check demanda.pdf                  <span class="c"># informe Markdown por stdout</span>
+<span class="b">$</span> derogada check demanda.docx -f json -o informe.json
+<span class="b">$</span> derogada check demanda.pdf -f tabla         <span class="c"># tabla en terminal</span>
+<span class="b">$</span> derogada check demanda.pdf --no-llm         <span class="c"># solo regex</span>
+<span class="b">$</span> derogada check demanda.pdf --model openai/qwen3.6
+<span class="b">$</span> derogada norma BOE-A-1992-26318             <span class="c"># estado de una norma suelta</span>
+<span class="b">$</span> derogada norma 32016R0679                   <span class="c"># también CELEX (EUR-Lex)</span>
+<span class="b">$</span> derogada cache clear                        <span class="c"># vacía la caché local</span></pre>
+    <p>Como biblioteca:</p>
+    <pre class="code"><span class="b">from</span> derogada <span class="b">import</span> analizar_documento
+
+informe = analizar_documento("demanda.pdf")
+<span class="b">for</span> r <span class="b">in</span> informe.resultados:
+    print(r.cita.texto, "->", r.estado.value, r.derogada_por)</pre>
+  </div>
+</section>
+
+<section class="block" id="arquitectura">
+  <div class="block-inner">
+    <div class="block-head"><span class="block-num">03</span><h2 class="block-title">Arquitectura: el pipeline</h2></div>
+    <div class="pipeline">
+      <div class="stage"><div class="stage-name">Ingesta</div><span class="stage-mod">ingest/loader.py</span><span class="stage-desc">txt / md / docx / pdf → texto plano. Detecta PDF escaneado sin capa de texto.</span></div>
+      <div class="arrow">→</div>
+      <div class="stage"><div class="stage-name">Extracción</div><span class="stage-mod">extract/</span><span class="stage-desc">Doble canal: regex determinista + LLM (JSON Schema). Gazetteer de siglas. Deduplicación por norma.</span></div>
+      <div class="arrow">→</div>
+      <div class="stage"><div class="stage-name">Resolución</div><span class="stage-mod">resolve/resolver.py</span><span class="stage-desc">Cita → identificador oficial (BOE-A… / CELEX). Valida contra metadatos. Si duda: candidatos.</span></div>
+      <div class="arrow">→</div>
+      <div class="stage hl"><div class="stage-name">Verificación</div><span class="stage-mod">check/status.py</span><span class="stage-desc">Estado de la norma Y del artículo citado contra BOE / CELLAR.</span></div>
+      <div class="arrow">→</div>
+      <div class="stage"><div class="stage-name">Sugerencia</div><span class="stage-mod">suggest/rewrite.py</span><span class="stage-desc">Propuesta textual solo con normas reales devueltas por la API. Sin fuente, no hay sugerencia.</span></div>
+      <div class="arrow">→</div>
+      <div class="stage"><div class="stage-name">Informe</div><span class="stage-mod">report/</span><span class="stage-desc">Markdown, JSON o tabla. Aviso legal permanente y enlace oficial por cita.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="fuentes">
+  <div class="block-inner">
+    <div class="block-head"><span class="block-num">04</span><h2 class="block-title">Fuentes oficiales</h2></div>
+    <p>Solo APIs oficiales; sin scrapers HTML. Las respuestas se cachean en SQLite (TTL 7 días)
+    con reintentos exponenciales, para ser educados con los servicios públicos.</p>
+    <p><strong>API de datos abiertos del BOE</strong>: <span class="mono">https://www.boe.es/datosabiertos/api</span></p>
+    <table class="tech">
+      <tr><th>Endpoint</th><th>Uso en Derogada</th></tr>
+      <tr><td class="mono">GET /legislacion-consolidada</td><td>Búsqueda de candidatos por título (DSL tipo Elasticsearch en el parámetro <span class="mono">query</span>, JSON)</td></tr>
+      <tr><td class="mono">GET …/id/{id}/metadatos</td><td><span class="mono">estatus_derogacion</span>, <span class="mono">vigencia_agotada</span>, <span class="mono">fecha_derogacion</span>, <span class="mono">numero_oficial</span>, <span class="mono">rango</span>, URLs consolidada y ELI</td></tr>
+      <tr><td class="mono">GET …/id/{id}/analisis</td><td>Referencias posteriores: quién la deroga (<span class="mono">SE DEROGA</span>) o modifica (<span class="mono">SE MODIFICA</span>), con <span class="mono">id_norma</span></td></tr>
+      <tr><td class="mono">GET …/id/{id}/texto/indice</td><td>Bloques del texto consolidado (artículos, disposiciones)</td></tr>
+      <tr><td class="mono">GET …/id/{id}/texto/bloque/{bloque}</td><td>Versiones de un artículo concreto (nivel artículo)</td></tr>
+    </table>
+    <p><strong>CELLAR / EUR-Lex</strong>: endpoint SPARQL público <span class="mono">https://publications.europa.eu/webapi/rdf/sparql</span></p>
+    <table class="tech">
+      <tr><th>Predicado CDM</th><th>Uso en Derogada</th></tr>
+      <tr><td class="mono">cdm:resource_legal_id_celex</td><td>Localiza el acto por CELEX limpio (32016R0679). El endpoint no casa literales simples con xsd:string: se filtra con <span class="mono">FILTER(STR(?o) = "…")</span></td></tr>
+      <tr><td class="mono">cdm:resource_legal_in-force</td><td>Vigencia codificada <span class="mono">"1"/"0"</span></td></tr>
+      <tr><td class="mono">cdm:resource_legal_date_entry-into-force<br>cdm:resource_legal_date_end-of-validity</td><td>Entrada en vigor y fin de validez</td></tr>
+      <tr><td class="mono">cdm:resource_legal_repeals_resource_legal</td><td>En sentido inverso: qué acto deroga al consultado (p. ej. 95/46/CE ← RGPD)</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="ia">
+  <div class="block-inner">
+    <div class="block-head"><span class="block-num">05</span><h2 class="block-title">La IA en Derogada</h2></div>
+    <p>La IA se usa para <strong>dos cosas puntuales</strong>, y nunca para decidir si una norma
+    está vigente: eso pertenece exclusivamente a las APIs oficiales. Un modelo generativo tiene
+    fecha de corte y no puede saber qué está derogado hoy; el BOE y CELLAR sí.</p>
+    <table class="tech">
+      <tr><th>Uso</th><th>Para qué</th><th>Cómo</th></tr>
+      <tr><td class="mono">extract/llm.py</td><td>Recall de citas: siglas y menciones informales ("la LRJCA", "el Estatuto de los Trabajadores") que el regex no ve</td><td>Salida estructurada con JSON Schema estricto (<span class="mono">texto, jurisdiccion, rango, numero, articulo, alias</span>), temperatura 0, troceo con solape en documentos largos, degradación a <span class="mono">json_object</span> si el proveedor no soporta <span class="mono">json_schema</span></td></tr>
+      <tr><td class="mono">suggest/rewrite.py</td><td>Redacta la propuesta de sustitución de citas derogadas o agotadas</td><td>El prompt solo contiene datos reales devueltos por la API (norma que deroga, URL, nota oficial, contexto). Regla de oro: sin fuente oficial, no hay sugerencia; si la llamada falla, se omite en silencio</td></tr>
+    </table>
+    <ul class="rules">
+      <li><strong>La IA lee, las fuentes deciden</strong><br>El LLM propone citas; el estado (vigente, derogada, modificada) lo determinan siempre BOE y CELLAR en vivo, nunca la memoria del modelo.</li>
+      <li><strong>El gazetteer manda sobre la memoria</strong><br>Si el modelo "recuerda" una versión histórica (p. ej. ET = Ley 8/1980), el gazetteer la corrige con la remisión vigente (RDL 2/2015).</li>
+      <li><strong>El regex prioriza</strong><br>Al fusionar los dos canales, una cita del LLM que duplica una regex se descarta; el LLM solo aporta citas genuinamente nuevas. Todo se deduplica por norma.</li>
+      <li><strong>Opcional y agnóstica</strong><br>Se configura con <span class="mono">DEROGADA_MODEL</span> (cualquier modelo LiteLLM) + <span class="mono">DEROGADA_API_BASE</span> / <span class="mono">DEROGADA_API_KEY</span>. Sin modelo, Derogada funciona completa en modo solo-regex.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block alt" id="estados">
+  <div class="block-inner">
+    <div class="block-head"><span class="block-num">06</span><h2 class="block-title">Estados y reglas de negocio</h2></div>
+    <table class="tech">
+      <tr><th>Estado</th><th>Significado</th></tr>
+      <tr><td class="mono">VIGENTE</td><td>La norma está en vigor y sin modificaciones posteriores consolidadas</td></tr>
+      <tr><td class="mono">MODIFICADA</td><td>Sigue viva pero tiene modificaciones consolidadas posteriores (con lista y fuentes)</td></tr>
+      <tr><td class="mono">DEROGADA</td><td>Derogada: quién la derogó y cuándo, con enlace oficial</td></tr>
+      <tr><td class="mono">VIGENCIA AGOTADA</td><td>Su vigencia temporal se agotó según el BOE</td></tr>
+      <tr><td class="mono">NO RESUELTA</td><td>Candidatos ambiguos: se listan, nunca se adivina</td></tr>
+      <tr><td class="mono">NO ENCONTRADA</td><td>No se pudo identificar en las fuentes oficiales</td></tr>
+    </table>
+    <ul class="rules">
+      <li><strong>Nunca inventar</strong><br>Si la desambiguación no es unívoca, la cita queda NO RESUELTA con sus candidatos. Cero alucinación de identificadores.</li>
+      <li><strong>Doble canal de extracción</strong><br>El LLM propone citas estructuradas (JSON Schema estricto); el regex valida y capta lo que falte. El gazetteer de siglas manda sobre la memoria del modelo (p. ej. ET = RDL 2/2015 vigente, no la Ley 8/1980 histórica).</li>
+      <li><strong>Verificación a dos niveles</strong><br>La norma completa (metadatos + análisis jurídico) y el artículo citado (bloque del texto consolidado): un artículo puede estar derogado aunque la norma siga viva.</li>
+      <li><strong>Todo identificador se valida</strong><br>Incluso los del gazetteer: <span class="mono">numero_oficial</span> y <span class="mono">rango</span> de la API deben casar con la cita antes de fiarse.</li>
+      <li><strong>Sugerencias ancladas</strong><br>La propuesta de cambio solo usa normas reales devueltas por la fuente oficial. Sin fuente, no hay sugerencia.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block alt" id="testing">
+  <div class="block-inner">
+    <div class="block-head"><span class="block-num">07</span><h2 class="block-title">Testing, CI y publicación</h2></div>
+    <ul class="rules">
+      <li><strong>Tests offline deterministas</strong><br>51 tests con cassettes VCR grabadas del BOE y CELLAR reales (<span class="mono">pytest -q</span> en ~0.3 s sin red). El test e2e con LLM se salta si no hay clave configurada.</li>
+      <li><strong>Lint y tipos</strong><br><span class="mono">ruff check src tests</span> en CI, matriz Python 3.10–3.13.</li>
+      <li><strong>Release</strong><br>Tag <span class="mono">v*</span> → build → tests → publicación en PyPI con Trusted Publishing (OIDC), sin tokens en el repo.</li>
+    </ul>
+    <p><strong>Limitaciones conocidas del MVP:</strong> sin OCR (los PDF escaneados se detectan y avisan),
+    normativa no consolidada en el BOE queda NO ENCONTRADA, la jurisprudencia está fuera de alcance,
+    y los textos consolidados del BOE son meramente informativos (el informe enlaza siempre la publicación oficial).</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p class="disclaimer">
+      <strong>Aviso:</strong> Derogada no ofrece asesoramiento jurídico. Los textos consolidados del
+      BOE tienen carácter meramente informativo: a efectos jurídicos, consulta siempre la
+      publicación oficial. Los datos de la UE proceden de CELLAR / EUR&#8209;Lex.
+    </p>
+    <p class="footer-links">
+      <a href="index.html">← Volver a la landing</a> ·
+      <a href="https://github.com/686f6c61/derogada">GitHub</a> ·
+      <a href="https://x.com/686f6c61">@686f6c61</a>
+    </p>
+  </div>
+  <hr class="foot">
+  <p class="foot-brand">§ Derogada · documentación técnica</p>
+</footer>
+
+</body>
+</html>

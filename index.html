@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derogada: ¿tu demanda invoca una norma derogada?</title>
+<meta name="description" content="Derogada lee tu escrito jurídico (PDF, Word, texto), extrae cada referencia normativa y comprueba en el BOE y EUR-Lex si sigue vigente, fue modificada o está derogada.">
+<link rel="canonical" href="https://derogada.686f6c61.dev/">
+<meta name="author" content="686f6c61">
+<meta name="keywords" content="derogada, legaltech, BOE, EUR-Lex, normas derogadas, vigencia normativa, derecho, python, pypi">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1E5AAB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231E5AAB'/%3E%3Ctext x='50' y='78' font-size='72' text-anchor='middle' fill='white' font-family='serif'%3E%C2%A7%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://derogada.686f6c61.dev/">
+<meta property="og:site_name" content="Derogada">
+<meta property="og:title" content="Derogada: ¿tu demanda invoca una norma derogada?">
+<meta property="og:description" content="Lee tu escrito jurídico, extrae cada referencia normativa y comprueba en el BOE y EUR-Lex si sigue vigente. Demo en vivo, 100% en tu navegador. pip install derogada">
+<meta property="og:image" content="https://derogada.686f6c61.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@686f6c61">
+<meta name="twitter:creator" content="@686f6c61">
+<meta name="twitter:title" content="Derogada: ¿tu demanda invoca una norma derogada?">
+<meta name="twitter:description" content="Lee tu escrito jurídico, extrae cada referencia normativa y comprueba en el BOE y EUR-Lex si sigue vigente. Demo en vivo, 100% en tu navegador.">
+<meta name="twitter:image" content="https://derogada.686f6c61.dev/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1E5AAB;
+    --ink:#262C40;
+    --paper:#FFFFFF;
+    --gray:#D9D9D9;
+    --border:3px solid var(--ink);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Archivo',Helvetica,Arial,sans-serif;
+    background:var(--gray);
+    color:var(--ink);
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--blue);color:#fff}
+  .display{
+    font-family:'Archivo Black','Archivo',Helvetica,sans-serif;
+    text-transform:uppercase;
+    line-height:.92;
+    letter-spacing:-.01em;
+  }
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+  a{color:inherit}
+
+  /* ============ NAV ============ */
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1rem 2rem;
+    background:var(--paper);
+    border-bottom:var(--border);
+    position:relative;z-index:10;
+  }
+  .logo{
+    display:flex;align-items:center;gap:.6rem;
+    font-family:'Archivo Black',sans-serif;font-size:1.4rem;letter-spacing:.02em;
+    text-decoration:none;
+  }
+  .logo-mark{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:2.2rem;height:2.2rem;background:var(--blue);color:#fff;
+    border:var(--border);box-shadow:4px 4px 0 var(--ink);
+    font-size:1.3rem;
+  }
+  .nav-links{font-weight:500;font-size:1rem}
+  .nav-links a{text-decoration:none;padding:.15rem .35rem}
+  .nav-links a:hover{background:var(--blue);color:#fff}
+  .nav-links .sep{color:var(--blue);font-weight:600}
+
+  /* ============ BADGE ROTATORIO ============ */
+  .badge{
+    position:absolute;top:5.2rem;right:2rem;z-index:20;
+    width:7.5rem;height:7.5rem;
+    pointer-events:none;
+  }
+  .badge .disc{
+    width:100%;height:100%;border-radius:50%;
+    background:var(--blue);border:var(--border);
+    box-shadow:5px 5px 0 var(--ink);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .badge svg{position:absolute;inset:0;animation:spin 14s linear infinite}
+  .badge text{fill:#fff;font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-family:'Archivo',sans-serif}
+  .badge .arrow{font-size:2rem;color:#fff;font-family:'JetBrains Mono',monospace}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ============ HERO ============ */
+  .hero{
+    background:var(--paper);
+    padding:4.5rem 2rem 5rem;
+    border-bottom:var(--border);
+    position:relative;
+  }
+  .hero-title{font-size:clamp(2.6rem,8.5vw,7.5rem);max-width:1400px}
+  .hero-title .line{display:block}
+  .hero-title .blue{color:var(--blue)}
+  .hero-title .outline{
+    color:transparent;
+    -webkit-text-stroke:2.5px var(--ink);
+  }
+  .hero-sub{
+    max-width:34rem;margin-top:2.2rem;font-size:1.05rem;line-height:1.55;font-weight:500;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;align-items:center}
+
+  .btn{
+    display:inline-block;text-decoration:none;cursor:pointer;
+    font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1rem;
+    padding:.9rem 1.4rem;border:var(--border);
+    box-shadow:6px 6px 0 var(--ink);
+    transition:transform .1s,box-shadow .1s;
+  }
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+  .btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-white{background:var(--paper);color:var(--ink)}
+
+  /* tarjeta terminal incrustada en el titular */
+  .term-card{
+    display:inline-block;vertical-align:middle;
+    background:var(--ink);color:#fff;
+    border:var(--border);box-shadow:7px 7px 0 var(--blue);
+    transform:rotate(-2deg);
+    padding:1rem 1.2rem;
+    font-family:'JetBrains Mono',monospace;font-size:clamp(.7rem,1.4vw,.95rem);
+    line-height:1.7;text-align:left;text-transform:none;letter-spacing:0;
+    margin:0 .8rem;
+  }
+  .term-card .prompt{color:#fff;font-weight:700}
+  .term-card .bad{color:#FF8A7A;text-decoration:line-through}
+  .term-card .ok{color:#8FB8FF}
+  .term-card .dim{color:#9aa3b8}
+
+  /* sello incrustado en el titular */
+  .stamp{
+    display:inline-flex;vertical-align:middle;
+    align-items:center;justify-content:center;text-align:center;
+    width:clamp(6rem,12vw,9.5rem);height:clamp(6rem,12vw,9.5rem);
+    border:3px dashed var(--blue);border-radius:50%;
+    color:var(--blue);background:var(--paper);
+    transform:rotate(6deg);
+    font-family:'Archivo Black',sans-serif;font-size:clamp(.65rem,1.3vw,.9rem);
+    text-transform:uppercase;line-height:1.25;padding:.8rem;
+    margin:0 .8rem;
+  }
+
+  /* ============ FRANJA: LAS QUE ESCRIBES Y LAS QUE RECIBES ============ */
+  .versus{background:var(--ink);color:#fff;border-bottom:var(--border);padding:4.5rem 2rem}
+  .versus-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:2.5rem;align-items:center;justify-content:space-between}
+  .versus-title{font-size:clamp(2rem,5vw,4.2rem)}
+  .versus-title .blue{color:var(--blue);-webkit-text-stroke:1px #fff}
+  .versus-title .outline{color:transparent;-webkit-text-stroke:2px #fff}
+  .versus-text{max-width:33rem;font-size:1.1rem;line-height:1.6;font-weight:500;color:#c7cdd9}
+  .versus-text strong{color:#fff}
+
+  /* ============ SECCIÓN: LAS LEYES ESTÁN VIVAS ============ */
+  .vivas{background:var(--paper);border-bottom:var(--border);padding:4.5rem 2rem}
+  .vivas-inner{max-width:1100px;margin:0 auto}
+  .vivas-title{font-size:clamp(2.2rem,5.5vw,4.5rem);margin-bottom:1.4rem}
+  .vivas-title .blue{color:var(--blue)}
+  .vivas-lead{max-width:44rem;font-size:1.1rem;line-height:1.6;font-weight:500;margin-bottom:2.5rem}
+  .vivas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .vivas-card{background:var(--paper);border:var(--border);box-shadow:8px 8px 0 var(--ink);padding:1.4rem}
+  .vivas-card.hl{background:var(--blue);color:#fff;box-shadow:8px 8px 0 var(--ink)}
+  .vivas-card.hl .vivas-num{color:transparent;-webkit-text-stroke:2px #fff}
+  .vivas-num{font-family:'Archivo Black',sans-serif;font-size:2.4rem;color:transparent;-webkit-text-stroke:2px var(--ink);line-height:1}
+  .vivas-card h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:1.2rem;margin:.6rem 0 .5rem}
+  .vivas-card p{font-size:.95rem;line-height:1.55;font-weight:500}
+  @media (max-width:900px){.vivas-grid{grid-template-columns:1fr}}
+
+  /* ============ MARQUEE ============ */
+  .marquee{
+    background:var(--ink);color:#fff;
+    border-bottom:var(--border);
+    overflow:hidden;white-space:nowrap;
+    padding:.8rem 0;
+  }
+  .marquee-inner{display:inline-block;animation:scroll 22s linear infinite}
+  .marquee span{
+    font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+    font-size:1.3rem;letter-spacing:.05em;padding-right:1rem;
+  }
+  .marquee .b{color:var(--blue);-webkit-text-stroke:.5px #fff}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ============ SECCIÓN AZUL: CÓMO FUNCIONA ============ */
+  .howto{
+    background:var(--blue);color:#fff;
+    border-bottom:var(--border);
+    padding:4.5rem 2rem 5rem;
+  }
+  .howto-head{display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-end;justify-content:space-between;max-width:1400px;margin:0 auto 3rem}
+  .howto-title{font-size:clamp(2.2rem,5.5vw,4.5rem)}
+  .howto-note{max-width:22rem;font-size:1rem;line-height:1.5;font-weight:500}
+  .steps{max-width:1400px;margin:0 auto}
+  .step{
+    display:grid;grid-template-columns:8rem 1fr 1.2fr;gap:2rem;align-items:baseline;
+    padding:2rem 0;border-top:2px solid #fff;
+  }
+  .step:last-child{border-bottom:2px solid #fff}
+  .step-num{
+    font-family:'Archivo Black',sans-serif;font-size:clamp(2.5rem,5vw,4rem);
+    color:transparent;-webkit-text-stroke:2px #fff;line-height:1;
+  }
+  .step-title{
+    font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+    font-size:clamp(1.4rem,3vw,2.4rem);line-height:1;
+  }
+  .step-desc{font-size:1rem;line-height:1.55;font-weight:500}
+  .step-desc .mono{font-size:.9em;background:rgba(0,0,0,.18);padding:.05em .3em}
+
+  /* ============ INFORME DE EJEMPLO ============ */
+  .report{padding:4.5rem 2rem 5rem;border-bottom:var(--border)}
+  .report-inner{max-width:1100px;margin:0 auto}
+  .report-title{font-size:clamp(2rem,5vw,4rem);margin-bottom:2.5rem}
+  .report-title .blue{color:var(--blue)}
+  .doc{
+    background:var(--paper);border:var(--border);
+    box-shadow:10px 10px 0 var(--ink);
+  }
+  .doc-head{
+    display:flex;justify-content:space-between;align-items:center;gap:1rem;
+    padding:1rem 1.5rem;border-bottom:var(--border);
+    font-family:'JetBrains Mono',monospace;font-size:.9rem;font-weight:700;
+  }
+  .doc-row{padding:1.2rem 1.5rem;border-bottom:2px solid var(--gray);display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;justify-content:space-between}
+  .doc-row:last-child{border-bottom:none}
+  .doc-cite{font-family:'JetBrains Mono',monospace;font-size:.92rem;font-weight:700}
+  .doc-meta{font-size:.85rem;font-weight:500;margin-top:.35rem}
+  .doc-meta a{color:var(--blue);font-weight:600}
+  .chip{
+    font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+    font-size:.8rem;letter-spacing:.05em;
+    padding:.4rem .8rem;border:2.5px solid var(--ink);
+    box-shadow:3px 3px 0 var(--ink);white-space:nowrap;
+  }
+  .chip-ok{background:var(--blue);color:#fff}
+  .chip-bad{background:var(--ink);color:#fff;text-decoration:line-through}
+  .chip-mod{background:var(--paper);color:var(--blue);border-color:var(--blue);box-shadow:3px 3px 0 var(--blue)}
+  .chip-warn{background:var(--paper);color:var(--ink);border-style:dashed;box-shadow:3px 3px 0 var(--blue)}
+  .chip-ue{background:var(--gray);color:var(--blue);border-color:var(--blue);border-style:dashed;box-shadow:3px 3px 0 var(--blue)}
+  .doc-foot{padding:.9rem 1.5rem;border-top:var(--border);font-family:'JetBrains Mono',monospace;font-size:.8rem;display:flex;gap:1.5rem;flex-wrap:wrap}
+
+  /* ============ DEMO EN VIVO ============ */
+  .demo{padding:4.5rem 2rem 5rem;border-bottom:var(--border);background:var(--paper)}
+  .demo-inner{max-width:1100px;margin:0 auto}
+  .demo-title{font-size:clamp(2rem,5vw,4rem);margin-bottom:1.2rem}
+  .demo-title .blue{color:var(--blue)}
+  .demo-note{max-width:38rem;font-weight:500;line-height:1.55;margin-bottom:2rem}
+  .demo-box{border:var(--border);box-shadow:10px 10px 0 var(--ink);background:var(--paper)}
+  .demo-ejemplos{
+    display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;
+    padding:.8rem 1.4rem;border-bottom:var(--border);background:var(--gray);
+    font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;
+  }
+  .btn-chip{
+    font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;
+    padding:.35rem .75rem;border:2.5px solid var(--ink);background:var(--paper);
+    box-shadow:3px 3px 0 var(--ink);cursor:pointer;color:var(--ink);
+    transition:transform .1s,box-shadow .1s;
+  }
+  .btn-chip:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+  .btn-chip.activo{background:var(--blue);color:#fff}
+  .demo-box textarea{
+    display:block;width:100%;min-height:11rem;border:none;outline:none;resize:vertical;
+    padding:1.2rem 1.4rem;background:var(--paper);color:var(--ink);
+    font-family:'JetBrains Mono',monospace;font-size:.88rem;line-height:1.6;
+    border-bottom:var(--border);overflow-y:hidden;
+  }
+  .demo-controls{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;padding:1rem 1.4rem}
+  .demo-hint{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--blue);font-weight:700}
+  .demo-status{margin:1.4rem 0;font-family:'JetBrains Mono',monospace;font-size:.88rem;min-height:1.2rem;line-height:1.6}
+  .demo-status code{background:var(--gray);padding:.1em .35em}
+  .demo-resultados .doc{margin-bottom:2rem}
+  .doc-meta a{color:var(--blue);font-weight:600}
+
+  /* ============ INSTALACIÓN ============ */
+  .install{
+    background:var(--ink);color:#fff;
+    padding:4.5rem 2rem 5rem;border-bottom:var(--border);
+  }
+  .install-inner{max-width:1100px;margin:0 auto}
+  .install-title{font-size:clamp(2rem,5vw,4rem);margin-bottom:2.5rem}
+  .install-title .blue{color:var(--blue);-webkit-text-stroke:1px #fff}
+  .cmd{
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    background:var(--paper);color:var(--ink);
+    border:var(--border);box-shadow:8px 8px 0 var(--blue);
+    padding:1.3rem 1.5rem;margin-bottom:1.2rem;
+    font-family:'JetBrains Mono',monospace;font-weight:700;
+    font-size:clamp(.95rem,2.5vw,1.5rem);
+  }
+  .cmd .copy{
+    flex:none;cursor:pointer;border:var(--border);
+    background:var(--blue);color:#fff;
+    font-family:'Archivo Black',sans-serif;font-size:.85rem;text-transform:uppercase;
+    padding:.6rem 1rem;box-shadow:4px 4px 0 var(--ink);
+    transition:transform .1s,box-shadow .1s;
+  }
+  .cmd .copy:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+  .cmd .copy:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+  .cmd2{font-size:clamp(.8rem,1.8vw,1.05rem);opacity:1;background:transparent;color:#fff;border-color:#fff;box-shadow:8px 8px 0 rgba(255,255,255,.25)}
+  .install-note{margin-top:2rem;font-family:'JetBrains Mono',monospace;font-size:.85rem;color:#c7cdd9}
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--ink);color:#c7cdd9;
+    padding:2.5rem 2rem 3rem;font-size:.85rem;line-height:1.6;
+  }
+  .footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between}
+  .footer-inner .disclaimer{max-width:38rem}
+  .footer-links{font-family:'JetBrains Mono',monospace;font-weight:700}
+  .footer-links a{color:#fff;text-decoration:none}
+  .footer-links a:hover{background:var(--blue)}
+  hr.foot{border:none;border-top:2px solid rgba(255,255,255,.2);margin:2rem auto;max-width:1100px}
+  .foot-brand{max-width:1100px;margin:0 auto;font-family:'Archivo Black',sans-serif;font-size:1rem;color:#fff;letter-spacing:.05em}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .step{grid-template-columns:1fr;gap:.6rem}
+    .badge{width:5.5rem;height:5.5rem;top:auto;bottom:1rem;right:1rem}
+    .badge .arrow{font-size:1.4rem}
+    nav{padding:.9rem 1.2rem}
+    .nav-links{font-size:.85rem}
+    .term-card,.stamp{display:flex;margin:1rem 0;width:auto}
+    .stamp{width:7rem;height:7rem}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#"><span class="logo-mark">§</span>Derogada</a>
+  <div class="nav-links">
+    <a href="#como-funciona">Cómo funciona</a><span class="sep"> / </span>
+    <a href="#informe">Informe</a><span class="sep"> / </span>
+    <a href="#demo">Demo</a><span class="sep"> / </span>
+    <a href="#instalar">Instalar</a><span class="sep"> / </span>
+    <a href="tecnica.html">Técnica</a><span class="sep"> / </span>
+    <a href="https://github.com/686f6c61/derogada">GitHub</a><span class="sep"> / </span>
+    <a href="https://pypi.org/project/derogada/">PyPI</a>
+  </div>
+</nav>
+
+<div class="badge" aria-hidden="true">
+  <svg viewBox="0 0 100 100">
+    <defs><path id="circ" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>
+    <text><textPath href="#circ">pip install derogada • pip install derogada •</textPath></text>
+  </svg>
+  <div class="disc"><span class="arrow">↓</span></div>
+</div>
+
+<header class="hero">
+  <h1 class="display hero-title">
+    <span class="line">Una demanda</span>
+    <span class="line blue">cita normas
+      <span class="term-card" aria-hidden="true"><span class="prompt">$</span> derogada check demanda.pdf<br>
+        <span class="bad">✕ Ley 30/1992 · DEROGADA</span><br>
+        <span class="ok">✓ Ley 39/2015 · VIGENTE</span><br>
+        <span class="dim">→ informe generado</span>
+      </span>
+    </span>
+    <span class="line">derogadas
+      <span class="stamp" aria-hidden="true">Verificado<br>BOE ✓<br>EUR&#8209;Lex ✓</span>
+    </span>
+    <span class="line"><span class="outline">sin saberlo.</span></span>
+  </h1>
+  <p class="hero-sub">
+    <strong>Derogada</strong> lee tu escrito (PDF, Word o texto), el que redactas y el que
+    recibes, extrae cada referencia normativa y comprueba en el <strong>BOE</strong> y en
+    <strong>EUR&#8209;Lex</strong> si sigue vigente, fue modificada o está derogada.
+    Con fuente oficial en cada línea.
+  </p>
+  <div class="hero-cta">
+    <a class="btn btn-blue" href="#instalar">$ pip install derogada</a>
+    <a class="btn btn-white" href="#como-funciona">Cómo funciona ↓</a>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>Vigente · <span class="b">Derogada</span> · Modificada · Vigencia agotada · No resuelta · </span><span>Vigente · <span class="b">Derogada</span> · Modificada · Vigencia agotada · No resuelta · </span><span>Vigente · <span class="b">Derogada</span> · Modificada · Vigencia agotada · No resuelta · </span><span>Vigente · <span class="b">Derogada</span> · Modificada · Vigencia agotada · No resuelta · </span>
+  </div>
+</div>
+
+<section class="versus">
+  <div class="versus-inner">
+    <h2 class="display versus-title">Las que <span class="blue">escribes</span><br>y las que <span class="outline">recibes</span></h2>
+    <p class="versus-text">
+      Derogada no solo revisa tus escritos: también los de la parte contraria.
+      Una norma derogada en la demanda que recibes es un argumento a tu favor.
+      El mejor error, a veces, es el humano. <strong>Ajeno.</strong>
+    </p>
+  </div>
+</section>
+
+<section class="vivas">
+  <div class="vivas-inner">
+    <h2 class="display vivas-title">Las leyes están <span class="blue">vivas</span></h2>
+    <p class="vivas-lead">
+      Muchas demandas, las tuyas y las que recibes, ya se redactan con modelos de IA
+      entrenados con datasets obsoletos. Un modelo generativo cita las leyes tal como
+      estaban <em>cuando aprendió</em>, no tal como están <strong>hoy</strong>.
+    </p>
+    <div class="vivas-grid">
+      <div class="vivas-card">
+        <div class="vivas-num">01</div>
+        <h3>El riesgo</h3>
+        <p>Escritos redactados por IA que invocan artículos derogados o reformados con total seguridad. Nadie revisó si seguían vigentes.</p>
+      </div>
+      <div class="vivas-card">
+        <div class="vivas-num">02</div>
+        <h3>La realidad</h3>
+        <p>Las normas nacen, se modifican y mueren cada semana en el BOE y en el DOUE. Ningún modelo recuerda qué está vigente hoy.</p>
+      </div>
+      <div class="vivas-card hl">
+        <div class="vivas-num">03</div>
+        <h3>La respuesta</h3>
+        <p>Verificación determinista: cada cita se contrasta al momento contra la fuente oficial. Sin probabilidad, sin alucinación: datos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="howto" id="como-funciona">
+  <div class="howto-head">
+    <h2 class="display howto-title">Lee. Contrasta.<br>Informa.</h2>
+    <p class="howto-note">Cuatro pasos entre tu escrito y la verdad oficial. Sin scrapers: solo las APIs abiertas del BOE y de la Oficina de Publicaciones de la UE.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3 class="step-title">Extrae las citas</h3>
+      <p class="step-desc">Sube un PDF, Word o texto: la IA detecta cada referencia (<span class="mono">Ley 30/1992, art. 42</span>, <span class="mono">Reglamento (UE) 2016/679</span>, <span class="mono">art. 217 LECrim</span>) aunque esté enterrada en una demanda de 200 páginas.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3 class="step-title">Contrasta con fuentes oficiales</h3>
+      <p class="step-desc">Cada cita se resuelve a su identificador oficial (<span class="mono">BOE-A-…</span> / <span class="mono">CELEX</span>) y se consulta en la API de datos abiertos del BOE y en CELLAR (EUR&#8209;Lex). Nivel de norma <em>y</em> de artículo.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3 class="step-title">Informe de vigencia</h3>
+      <p class="step-desc">Vigente, modificada, derogada o vigencia agotada: cada cita con su estado, la norma que la derogó o modificó y el enlace oficial correspondiente.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3 class="step-title">Propone el cambio</h3>
+      <p class="step-desc">Una sustitución textual anclada a la norma vigente equivalente, con su fuente. Si una cita es ambigua se marca <em>no resuelta</em>: nunca se adivina.</p>
+    </div>
+  </div>
+</section>
+
+<section class="report" id="informe">
+  <div class="report-inner">
+    <h2 class="display report-title">Así se ve <span class="blue">un informe</span></h2>
+    <div class="doc">
+      <div class="doc-head"><span>informe.md</span><span>derogada 0.1.0</span></div>
+      <div class="doc-row">
+        <div>
+          <div class="doc-cite">Ley 30/1992, de 26 de noviembre · art. 42</div>
+          <div class="doc-meta">→ derogada por Ley 39/2015 y Ley 40/2015 · <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1992-26318">BOE&#8209;A&#8209;1992&#8209;26318</a></div>
+        </div>
+        <span class="chip chip-bad">Derogada</span>
+      </div>
+      <div class="doc-row">
+        <div>
+          <div class="doc-cite">Ley 39/2015, de 1 de octubre · art. 21.1</div>
+          <div class="doc-meta">→ texto consolidado al día · <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2015-10565">BOE&#8209;A&#8209;2015&#8209;10565</a></div>
+        </div>
+        <span class="chip chip-ok">Vigente</span>
+      </div>
+      <div class="doc-row">
+        <div>
+          <div class="doc-cite">Reglamento (UE) 2016/679 (RGPD) · art. 6</div>
+          <div class="doc-meta">→ en vigor · <a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32016R0679">CELEX 32016R0679</a></div>
+        </div>
+        <span class="chip chip-ok">Vigente</span>
+      </div>
+      <div class="doc-row">
+        <div>
+          <div class="doc-cite">Real Decreto 429/1993 · art. 5</div>
+          <div class="doc-meta">→ 2 candidatos posibles · revisión manual recomendada</div>
+        </div>
+        <span class="chip chip-warn">No resuelta</span>
+      </div>
+      <div class="doc-foot">
+        <span>4 citas</span><span>1 derogada</span><span>2 vigentes</span><span>1 no resuelta</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="demo">
+  <div class="demo-inner">
+    <h2 class="display demo-title">Pruébalo <span class="blue">en vivo</span></h2>
+    <p class="demo-note">
+      Pega un fragmento de escrito jurídico y lo contrastamos ahora mismo con el
+      <strong>BOE</strong> y <strong>EUR&#8209;Lex</strong>, en vivo. <strong>Se ejecuta 100% en
+      tu navegador</strong>: tu texto no sale de tu máquina (de las consultas UE solo viaja el
+      número CELEX, dato público). La extracción con IA va con el paquete.
+    </p>
+    <div class="demo-box">
+      <div class="demo-ejemplos">
+        <span>Ejemplos:</span>
+        <button type="button" class="btn-chip activo" data-ej="despido">Despido</button>
+        <button type="button" class="btn-chip" data-ej="contencioso">Contencioso</button>
+        <button type="button" class="btn-chip" data-ej="datos">Datos personales</button>
+        <button type="button" class="btn-chip" data-ej="penal">Penal</button>
+      </div>
+      <textarea id="demo-texto" spellcheck="false" aria-label="Texto jurídico a analizar"></textarea>
+      <div class="demo-controls">
+        <button class="btn btn-blue" id="demo-btn" type="button">Analizar →</button>
+        <span class="demo-hint">BOE + EUR-Lex en vivo · sin servidor</span>
+      </div>
+    </div>
+    <div id="demo-status" class="demo-status" role="status"></div>
+    <div id="demo-resultados" class="demo-resultados"></div>
+  </div>
+</section>
+
+<section class="install" id="instalar">
+  <div class="install-inner">
+    <h2 class="display install-title">Instala y <span class="blue">comprueba</span></h2>
+    <div class="cmd">
+      <span>$ pip install derogada</span>
+      <button class="copy" id="copyBtn" type="button">Copiar</button>
+    </div>
+    <div class="cmd cmd2">
+      <span>$ derogada check demanda.pdf --format md --out informe.md</span>
+    </div>
+    <p class="install-note">Python ≥ 3.10 · BOE + EUR&#8209;Lex · tu clave de IA: <strong>DEROGADA_MODEL</strong> (OpenAI, Anthropic, Azure, Ollama…)</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <p class="disclaimer">
+      <strong>Aviso:</strong> Derogada no ofrece asesoramiento jurídico. Los textos consolidados del
+      BOE tienen carácter meramente informativo: a efectos jurídicos, consulta siempre la
+      publicación oficial. Los datos de la UE proceden de CELLAR / EUR&#8209;Lex.
+    </p>
+    <p class="footer-links">
+      <a href="https://github.com/686f6c61/derogada">GitHub</a> ·
+      <a href="https://x.com/686f6c61">@686f6c61</a> ·
+      <a href="https://pypi.org/project/derogada/">PyPI</a> ·
+      <a href="tecnica.html">Documentación técnica</a>
+    </p>
+  </div>
+  <hr class="foot">
+  <p class="foot-brand">§ Derogada · detecta la norma que ya no existe</p>
+</footer>
+
+<script>
+  document.getElementById('copyBtn').addEventListener('click', function () {
+    navigator.clipboard.writeText('pip install derogada').then(() => {
+      this.textContent = '¡Copiado!';
+      setTimeout(() => { this.textContent = 'Copiar'; }, 1500);
+    });
+  });
+
+  /* ============ DEMO EN VIVO: 100% en el navegador, contra la API oficial del BOE ============ */
+  const EJEMPLOS = {
+    despido: `DEMANDA DE DESPIDO
+
+PRIMERO.- El despido se produjo sin observar lo dispuesto en el artículo 55 del
+Estatuto de los Trabajadores (ET), en relación con el artículo 42 de la Ley 30/1992,
+de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas.
+
+SEGUNDO.- La notificación se practicó conforme a la Ley 39/2015, art. 21.1, del
+Procedimiento Administrativo Común.
+
+TERCERO.- El tratamiento de datos personales se ampara en el artículo 6 del
+Reglamento (UE) 2016/679 (RGPD), que vino a sustituir a la Directiva 95/46/CE.`,
+    contencioso: `RECURSO CONTENCIOSO-ADMINISTRATIVO
+
+PRIMERO.- La resolución recurrida se dictó al amparo del artículo 114 de la LRJCA,
+sin tener en cuenta lo dispuesto en la Ley 40/2015, de 1 de octubre, de Régimen
+Jurídico del Sector Público.
+
+SEGUNDO.- El silencio administrativo se rige por la Ley 39/2015, art. 24, del
+Procedimiento Administrativo Común, sin perjuicio de lo previsto en el
+Real Decreto-ley 6/2022, de 29 de marzo.`,
+    datos: `ESCRITO DE PROTECCIÓN DE DATOS
+
+PRIMERO.- El tratamiento de los datos se basa en el artículo 6.1.b) del
+Reglamento (UE) 2016/679 (RGPD) y en la Ley Orgánica 3/2018, de 5 de diciembre,
+de Protección de Datos Personales (LOPDGDD).
+
+SEGUNDO.- La Directiva 95/46/CE, derogada por el propio RGPD, ya no resulta de
+aplicación al tratamiento descrito.`,
+    penal: `ESCRITO DE DEFENSA PENAL
+
+PRIMERO.- La prueba obtenida con vulneración de derechos no puede sustentar la
+condena, conforme al artículo 11.1 de la Constitución Española (CE) y al
+art. 217 LECrim.
+
+SEGUNDO.- El tipo penal del artículo 273 de la Ley Orgánica 10/1995, de 23 de
+noviembre, del Código Penal, exige dolo directo en la apropiación.`,
+  };
+
+  const $texto = document.getElementById('demo-texto');
+  const $status = document.getElementById('demo-status');
+  const $resultados = document.getElementById('demo-resultados');
+  $texto.value = EJEMPLOS.despido;
+
+  // La caja crece con el contenido: sin scroll
+  function autoGrow() {
+    $texto.style.height = 'auto';
+    $texto.style.height = ($texto.scrollHeight + 6) + 'px';
+  }
+  $texto.addEventListener('input', autoGrow);
+  window.addEventListener('load', autoGrow);
+  autoGrow();
+
+  document.querySelectorAll('.btn-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-chip').forEach(b => b.classList.remove('activo'));
+      btn.classList.add('activo');
+      $texto.value = EJEMPLOS[btn.dataset.ej];
+      $resultados.innerHTML = '';
+      $status.textContent = '';
+      autoGrow();
+    });
+  });
+
+  /* ---------- Extracción determinista (mismo criterio que el paquete) ---------- */
+  const RE_ES = /\b(Ley Orgánica|Ley|Real Decreto-ley|Real Decreto Legislativo|Real Decreto|Decreto|Orden|Resolución)\s+(?:n[úu]m(?:ero)?\.?\s*)?(\d{1,4}\s*\/\s*\d{4})/gi;
+  const RE_UE = /\b(Reglamento|Directiva|Decisión)(?:\s*\((?:UE|CE|CEE)\))?(?:\s+(?:n[.ºo]+|número)\s*)?\s+(\d{2,4}\s*\/\s*\d+)(?:\s*\/\s*(?:CE|UE))?/gi;
+  const RE_ART = /\bart(?:ículos?|s)?\.?\s+(\d+(?:\.\d+)?)/gi;
+  const RANGOS = {"ley orgánica":"Ley Orgánica","ley":"Ley","real decreto-ley":"Real Decreto-ley","real decreto legislativo":"Real Decreto Legislativo","real decreto":"Real Decreto","decreto":"Decreto","orden":"Orden","resolución":"Resolución","reglamento":"Reglamento","directiva":"Directiva","decisión":"Decisión"};
+  const GAZET = {
+    CE:{id:"BOE-A-1978-31229",jur:"ES",rango:"Constitución",numero:null},
+    LEC:{id:"BOE-A-2000-323",jur:"ES",rango:"Ley",numero:"1/2000"},
+    LECrim:{id:"BOE-A-1882-6036",jur:"ES",rango:null,numero:null},
+    LRJCA:{id:"BOE-A-1992-26318",jur:"ES",rango:"Ley",numero:"30/1992"},
+    LPAC:{id:"BOE-A-2015-10565",jur:"ES",rango:"Ley",numero:"39/2015"},
+    LRJAP:{id:"BOE-A-2015-10566",jur:"ES",rango:"Ley",numero:"40/2015"},
+    ET:{id:"BOE-A-2015-11430",jur:"ES",rango:"Real Decreto Legislativo",numero:"2/2015"},
+    LGT:{id:"BOE-A-2003-23186",jur:"ES",rango:"Ley",numero:"58/2003"},
+    LOPDGDD:{id:"BOE-A-2018-16673",jur:"ES",rango:"Ley Orgánica",numero:"3/2018"},
+    RGPD:{id:"32016R0679",jur:"UE",rango:"Reglamento",numero:"2016/679"},
+  };
+  const RE_ALIAS = new RegExp("\\b(" + Object.keys(GAZET).sort((a,b) => b.length - a.length).join("|") + ")\\b", "g");
+
+  const canonRango = r => RANGOS[r.toLowerCase()] || r;
+  const normNumero = n => (n || "").replace(/\s+/g, "").replace(/\/(CE|CEE|UE)$/i, "") || null;
+  const norm = s => (s || "").toString().trim().toLowerCase();
+
+  function articuloCercano(texto, ini, fin) {
+    const V = 160, izq = Math.max(0, ini - V), antes = texto.slice(izq, ini);
+    let mejor = null, previa = null, segmento = "", m;
+    RE_ART.lastIndex = 0;
+    while ((m = RE_ART.exec(antes))) {
+      previa = m[1];
+      mejor = { d: ini - (izq + m.index + m[0].length), a: m[1] };
+      segmento = antes.slice(m.index + m[0].length);
+    }
+    if (previa && /^\s*(?:del|de la|de los|de las|de)\s+[\w áéíóúüÁÉÍÓÚÜñÑ()]{0,60}$/i.test(segmento)) return previa;
+    RE_ART.lastIndex = 0;
+    const desp = texto.slice(fin, fin + V);
+    if ((m = RE_ART.exec(desp)) && (!mejor || m.index < mejor.d)) mejor = { d: m.index, a: m[1] };
+    return mejor ? mejor.a : null;
+  }
+
+  function extraerCitas(texto) {
+    const citas = [], ocupados = [];
+    let m;
+    RE_ES.lastIndex = 0;
+    while ((m = RE_ES.exec(texto))) {
+      ocupados.push([m.index, m.index + m[0].length]);
+      citas.push({ texto: m[0], jur: "ES", rango: canonRango(m[1]), numero: normNumero(m[2]), articulo: articuloCercano(texto, m.index, m.index + m[0].length) });
+    }
+    RE_UE.lastIndex = 0;
+    while ((m = RE_UE.exec(texto))) {
+      ocupados.push([m.index, m.index + m[0].length]);
+      citas.push({ texto: m[0], jur: "UE", rango: canonRango(m[1]), numero: normNumero(m[2]), articulo: articuloCercano(texto, m.index, m.index + m[0].length) });
+    }
+    RE_ALIAS.lastIndex = 0;
+    while ((m = RE_ALIAS.exec(texto))) {
+      if (ocupados.some(([a, b]) => a <= m.index && m.index < b)) continue;
+      const g = GAZET[m[1]];
+      ocupados.push([m.index, m.index + m[0].length]);
+      citas.push({ texto: m[0], jur: g.jur, rango: g.rango, numero: g.numero, alias: m[1], articulo: articuloCercano(texto, m.index, m.index + m[0].length) });
+    }
+    const vistos = new Map();
+    for (const c of citas) {
+      const k = [c.jur, (c.numero || c.alias || c.texto).toLowerCase(), c.articulo || ""].join("|");
+      if (!vistos.has(k)) vistos.set(k, c);
+      else if (!vistos.get(k).articulo && c.articulo) vistos.get(k).articulo = c.articulo;
+    }
+    return [...vistos.values()];
+  }
+
+  /* ---------- API del BOE (CORS abierto: acceso directo desde el navegador) ---------- */
+  const BOE = "https://www.boe.es/datosabiertos/api";
+  const cacheApi = new Map();
+  async function boe(path, params) {
+    const url = BOE + path + (params ? "?" + new URLSearchParams(params) : "");
+    if (cacheApi.has(url)) return cacheApi.get(url);
+    const r = await fetch(url, { headers: { Accept: "application/json" } });
+    if (r.status === 400 || r.status === 404) return null;
+    if (!r.ok) throw new Error("BOE HTTP " + r.status);
+    let d = (await r.json()).data;
+    if (Array.isArray(d) && d.length === 1) d = d[0];
+    cacheApi.set(url, d);
+    return d;
+  }
+  const metadatos = id => boe(`/legislacion-consolidada/id/${id}/metadatos`);
+  async function posteriores(id) {
+    const a = await boe(`/legislacion-consolidada/id/${id}/analisis`);
+    return (((a || {}).referencias || {}).posteriores || []).flatMap(g => g.posterior || []);
+  }
+  async function buscar(q) {
+    const query = JSON.stringify({ query: { query_string: { query: `titulo:(${q.replace(/"/g, " ")})` } } });
+    const d = await boe("/legislacion-consolidada", { query, limit: 6, offset: 0 });
+    return d ? (Array.isArray(d) ? d : [d]).slice(0, 6) : [];
+  }
+  const urlBoe = id => "https://www.boe.es/buscar/act.php?id=" + id;
+
+  async function verificarES(c) {
+    let id = null, titulo = null, candidatos = [];
+    const g = c.alias ? GAZET[c.alias] : null;
+    if (g) {
+      const meta = await metadatos(g.id).catch(() => null);
+      if (meta && (!g.numero || norm(meta.numero_oficial) === norm(g.numero))) { id = g.id; titulo = meta.titulo; }
+    }
+    const numero = c.numero || (g && g.numero), rango = c.rango || (g && g.rango);
+    if (!id && numero) {
+      const encontrados = await buscar(`${rango || ""} ${numero}`.trim()).catch(() => []);
+      const exactos = encontrados.filter(e => norm(e.numero_oficial) === norm(numero) &&
+        (!rango || norm((e.rango && e.rango.texto) || e.rango) === norm(rango)));
+      if (exactos.length === 1) { id = exactos[0].identificador; titulo = exactos[0].titulo; }
+      else candidatos = (exactos.length ? exactos : encontrados)
+        .map(e => ({ identificador: e.identificador, url: e.url_html_consolidada || urlBoe(e.identificador) }));
+    }
+    if (!id) {
+      return candidatos.length
+        ? { estado: "NO RESUELTA", candidatos, nota: `${candidatos.length} candidatos posibles; revise manualmente` }
+        : { estado: "NO ENCONTRADA", nota: "No se pudo identificar la norma en el BOE" };
+    }
+    const meta = await metadatos(id);
+    if (!meta) return { estado: "NO ENCONTRADA", nota: "Sin ficha en la API del BOE" };
+    const posts = await posteriores(id);
+    const rel = p => (p.relacion && p.relacion.texto) || "";
+    const derogas = posts.filter(p => rel(p).includes("DEROGA"));
+    const mods = posts.filter(p => rel(p).includes("MODIFICA") || rel(p).includes("AÑADE"));
+    const base = { norma: { identificador: id, titulo, url: meta.url_html_consolidada || urlBoe(id) } };
+    if (meta.estatus_derogacion === "S") {
+      const f = meta.fecha_derogacion;
+      return { ...base, estado: "DEROGADA",
+        derogada_por: derogas.length ? { identificador: derogas[0].id_norma, url: urlBoe(derogas[0].id_norma) } : null,
+        nota: "Derogada" + (f ? ` el ${f.slice(6,8)}/${f.slice(4,6)}/${f.slice(0,4)}` : "") + (derogas.length && derogas[0].texto ? ` (${derogas[0].texto.trim()})` : "") };
+    }
+    if (meta.vigencia_agotada === "S") return { ...base, estado: "VIGENCIA AGOTADA", nota: "Vigencia agotada según el BOE" };
+    if (mods.length) return { ...base, estado: "MODIFICADA", nota: `${mods.length} modificaciones posteriores consolidadas` };
+    return { ...base, estado: "VIGENTE" };
+  }
+
+  /* ---------- UE: verificación EN VIVO contra CELLAR (SPARQL) ----------
+     CELLAR no admite CORS, así que la query se envía directa (por si lo habilitan)
+     o vía proxy CORS público. La query solo contiene el CELEX: dato público. */
+  const CELLAR = "https://publications.europa.eu/webapi/rdf/sparql";
+  // Proxy CORS para CELLAR. Por defecto uno público; para producción, despliega
+  // proxy/cellar-cors.js (Cloudflare Workers, gratis) y pon aquí tu URL + "/?url=".
+  const UE_PROXY = "https://api.cors.lol/?url=";
+  const CDM = "PREFIX cdm: <http://publications.europa.eu/ontology/cdm#>\n";
+  const urlEurLex = celex => "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:" + celex;
+
+  const queryEstado = celex => CDM + `SELECT ?inforce ?eif ?endval WHERE {
+  ?work cdm:resource_legal_id_celex ?celex .
+  FILTER(STR(?celex) = "${celex}")
+  OPTIONAL { ?work cdm:resource_legal_in-force ?inforce }
+  OPTIONAL { ?work cdm:resource_legal_date_entry-into-force ?eif }
+  OPTIONAL { ?work cdm:resource_legal_date_end-of-validity ?endval }
+}`;
+  const queryDerogadaPor = celex => CDM + `SELECT DISTINCT ?derogante WHERE {
+  ?work cdm:resource_legal_id_celex ?c .
+  FILTER(STR(?c) = "${celex}")
+  ?otro cdm:resource_legal_repeals_resource_legal ?work .
+  ?otro cdm:resource_legal_id_celex ?derogante .
+}`;
+
+  const cacheSparql = new Map();
+  async function sparql(query) {
+    if (cacheSparql.has(query)) return cacheSparql.get(query);
+    const url = CELLAR + "?query=" + encodeURIComponent(query) + "&format=application%2Fsparql-results%2Bjson";
+    const vias = [url, UE_PROXY + encodeURIComponent(url)];
+    for (const u of vias) {
+      try {
+        const r = await fetch(u, { headers: { Accept: "application/sparql-results+json" } });
+        if (!r.ok) continue;
+        const j = await r.json();
+        const filas = j.results.bindings.map(f =>
+          Object.fromEntries(Object.entries(f).map(([k, v]) => [k, v.value])));
+        cacheSparql.set(query, filas);
+        return filas;
+      } catch { /* prueba la siguiente vía */ }
+    }
+    throw new Error("CELLAR inaccesible");
+  }
+
+  function celexDe(c) {
+    if (c.alias && GAZET[c.alias].jur === "UE") return GAZET[c.alias].id;
+    const L = { reglamento: "R", directiva: "L", "decisión": "D" }[(c.rango || "").toLowerCase()];
+    if (!L || !c.numero || !c.numero.includes("/")) return null;
+    const [a, n] = c.numero.split("/", 2);
+    if (!/^\d+$/.test(a) || !/^\d+$/.test(n)) return null;
+    let ano = parseInt(a, 10);
+    if (ano < 100) ano += 1900;
+    return `3${ano}${L}${String(parseInt(n, 10)).padStart(4, "0")}`;
+  }
+
+  async function verificarUE(c) {
+    const celex = celexDe(c);
+    if (!celex) return { estado: "NO ENCONTRADA", nota: "No se pudo calcular el CELEX" };
+    const norma = { identificador: celex, url: urlEurLex(celex) };
+    try {
+      const filas = await sparql(queryEstado(celex));
+      if (!filas.length) return { estado: "NO ENCONTRADA", norma, nota: "Sin ficha en CELLAR (EUR-Lex)" };
+      const valores = new Set(filas.filter(f => f.inforce).map(f => f.inforce));
+      const enVigor = valores.has("1") || valores.has("true");
+      if (enVigor) {
+        const eif = filas[0].eif;
+        return { estado: "VIGENTE", norma, nota: (eif ? `En vigor desde ${eif}` : "En vigor") + " · EUR-Lex en vivo" };
+      }
+      const derogantes = await sparql(queryDerogadaPor(celex));
+      const d0 = derogantes.length ? derogantes[0].derogante : null;
+      const endval = filas[0].endval;
+      return { estado: "DEROGADA", norma,
+        derogada_por: d0 ? { identificador: d0, url: urlEurLex(d0) } : null,
+        nota: (endval ? `Fin de validez: ${endval}` : "Derogada") + " · EUR-Lex en vivo" };
+    } catch (e) {
+      return { estado: "UE · SIN VERIFICAR", norma,
+        nota: "EUR-Lex/CELLAR inaccesible ahora mismo desde el navegador. Con el paquete (pip install derogada) se verifica en vivo." };
+    }
+  }
+
+  /* ---------- Render ---------- */
+  function esc(s) {
+    const d = document.createElement("div");
+    d.textContent = s == null ? "" : String(s);
+    return d.innerHTML;
+  }
+  function escUrl(u) {
+    // URLs siempre de nuestras APIs, pero por robustez: solo http(s) y comillas escapadas
+    const s = String(u == null ? "" : u);
+    return /^https?:\/\//i.test(s) ? s.replace(/"/g, "%22") : "#";
+  }
+  function chipClass(e) {
+    if (e === "VIGENTE") return "chip-ok";
+    if (e === "MODIFICADA") return "chip-mod";
+    if (e === "DEROGADA" || e === "VIGENCIA AGOTADA") return "chip-bad";
+    if (e.indexOf("UE") === 0) return "chip-ue";
+    return "chip-warn";
+  }
+  function renderInforme(resultados) {
+    const contar = est => resultados.filter(r => r.estado === est).length;
+    const r = { total: resultados.length, derogadas: contar("DEROGADA"), modificadas: contar("MODIFICADA"),
+      vigentes: contar("VIGENTE"), agotadas: contar("VIGENCIA AGOTADA"),
+      no_resueltas: contar("NO RESUELTA") + contar("NO ENCONTRADA"), ue: resultados.filter(x => x.estado.indexOf("UE") === 0).length };
+    let html = `<div class="doc"><div class="doc-head"><span>resultado</span><span>${r.total} citas · ${r.derogadas} derogadas · ${r.modificadas} modificadas · ${r.vigentes} vigentes · ${r.agotadas} agotadas · ${r.no_resueltas} no resueltas · ${r.ue} UE sin verificar</span></div>`;
+    for (const res of resultados) {
+      let meta = "";
+      if (res.derogada_por) meta = `→ derogada por <a href="${escUrl(res.derogada_por.url)}">${esc(res.derogada_por.identificador)}</a>`;
+      else if (res.norma && res.norma.url) meta = `→ <a href="${escUrl(res.norma.url)}">${esc(res.norma.identificador)}</a>`;
+      if (res.nota) meta += ` · ${esc(res.nota)}`;
+      if (res.candidatos && res.candidatos.length)
+        meta += `<br>candidatos: ${res.candidatos.map(c => `<a href="${escUrl(c.url)}">${esc(c.identificador)}</a>`).join(" · ")}`;
+      const art = res.cita.articulo ? " · art. " + esc(res.cita.articulo) : "";
+      html += `<div class="doc-row"><div><div class="doc-cite">${esc(res.cita.texto)}${art}</div>` +
+        `<div class="doc-meta">${meta}</div></div>` +
+        `<span class="chip ${chipClass(res.estado)}">${esc(res.estado)}</span></div>`;
+    }
+    $resultados.innerHTML = html + "</div>";
+  }
+
+  document.getElementById("demo-btn").addEventListener("click", async () => {
+    const texto = $texto.value.trim();
+    if (!texto) { $status.textContent = "Pega un texto primero."; return; }
+    $status.textContent = "Extrayendo citas y consultando la API oficial del BOE…";
+    $resultados.innerHTML = "";
+    try {
+      const citas = extraerCitas(texto);
+      if (!citas.length) { $status.textContent = "No se han detectado referencias normativas con el canal determinista."; return; }
+      const resultados = [];
+      for (const c of citas) {
+        resultados.push({ cita: c, ...(c.jur === "UE" ? await verificarUE(c) : await verificarES(c)) });
+      }
+      renderInforme(resultados);
+      $status.textContent = "";
+    } catch (err) {
+      $status.textContent = "⚠️ " + err.message + ". La demo habla directamente con la API del BOE; revisa tu conexión.";
+    }
+  });
+
+  // Smoke-test: ?autodemo=1 lanza el análisis al cargar (usado en pruebas headless)
+  if (new URLSearchParams(location.search).has("autodemo")) {
+    window.addEventListener("load", () => {
+      const ej = new URLSearchParams(location.search).get("ej");
+      if (ej && EJEMPLOS[ej]) document.querySelector(`.btn-chip[data-ej="${ej}"]`).click();
+      document.getElementById("demo-btn").click();
+    });
+  }
+</script>
+
+</body>
+</html>
